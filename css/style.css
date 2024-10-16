@@ -84,7 +84,7 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   nav ul {
     display: none;
   }
@@ -169,6 +169,11 @@ nav .nav-actions .list-btn img {
   }
   .hero p {
     width: 320px;
+  }
+}
+@media(min-width: 361px) and (max-width: 843px) {
+  .hero .hero-imgs {
+    display: none;
   }
 }
 /* ! top-categories-section & featured-courses-section  */
@@ -370,6 +375,12 @@ nav .nav-actions .list-btn img {
     display: inline;
   }
 }
+@media (max-width: 834px) {
+  .featured-courses-cards {
+    justify-content: center;
+    gap: 35px;
+  }
+}
 /* ! explore-courses-section */
 .explore-courses {
   margin: 0 50px;
@@ -422,6 +433,18 @@ nav .nav-actions .list-btn img {
     width: 300px;
   }
 }
+@media (max-width: 834px) {
+  .explore-courses {
+    height: fit-content;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+.explore-courses p{
+  width: 290px;
+}
+}
 /* ! stat-online */
 .stat-online {
   display: flex;
@@ -457,6 +480,11 @@ nav .nav-actions .list-btn img {
     gap: 30px;
   }
 }
+@media (max-width: 834px) {
+  .stat-online {
+    gap: 30px;
+  }
+}
 /* ! skills-section */
 .skills-container {
   padding: 0 50px;
@@ -489,7 +517,7 @@ nav .nav-actions .list-btn img {
   font-size: 18px;
   gap: 8px;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   .skills-container {
     flex-direction: column-reverse;
   }
@@ -553,7 +581,7 @@ nav .nav-actions .list-btn img {
   padding: 10px 24px;
   border-radius: 24px;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   .join-us-container {
     margin: 0;
     flex-direction: column;
@@ -679,7 +707,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   footer {
     height: max-content;
     padding: 20px;
@@ -688,9 +716,6 @@ footer .about-us a:hover path {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
-  }
-  footer > p {
-    text-align: center;
   }
   footer .footer-content .logo-container p {
     width: 320px;

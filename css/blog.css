@@ -84,7 +84,7 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 834px) {
   nav ul {
     display: none;
   }
@@ -252,7 +252,7 @@ nav .nav-actions .list-btn img {
     left: 92%;
   }
   .all-articles .all-articles-header h2 {
-    padding-left: 20px;
+    padding-left: 30px;
   }
   .all-articles .all-articles-header div {
     width: 320px;
@@ -275,6 +275,11 @@ nav .nav-actions .list-btn img {
   .all-articles-card .card-title {
     width: 300px;
   }
+}
+@media(min-width: 361px) and (max-width: 843px) {
+  .all-articles .all-articles-cards .all-articles-card{
+  width: 340px;
+}
 }
 /* ! footer-section */
 footer {
@@ -387,7 +392,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   footer {
     height: max-content;
     padding: 20px;

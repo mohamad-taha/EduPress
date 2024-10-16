@@ -84,7 +84,7 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 843px) {
   nav ul {
     display: none;
   }
@@ -306,6 +306,11 @@ nav .nav-actions .list-btn img {
     width: 100%;
   }
 }
+@media(min-width: 361px) and (max-width: 843px) {
+  .all-courses .all-courses-cards .all-courses-card{
+  width: 340px;
+}
+}
 /* ! footer-section */
 footer {
   display: flex;
@@ -417,7 +422,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   footer {
     height: max-content;
     padding: 20px;

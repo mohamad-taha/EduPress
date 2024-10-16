@@ -84,7 +84,7 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 834px) {
   nav ul {
     display: none;
   }
@@ -157,7 +157,7 @@ iframe {
   width: 783px;
   height: 390px;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   .contact-container {
     flex-direction: column;
     padding: 0;
@@ -173,10 +173,6 @@ iframe {
     width: 100%;
     margin-top: 20px;
     border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
   }
 }
 /* ! create-comment-section */
@@ -259,6 +255,21 @@ iframe {
   }
   .create-comment .comment-form form .contact-input {
     width: 200px;
+  }
+  .create-comment .comment-form form textarea {
+    width: 300px;
+  }
+}
+@media(min-width: 361px) and (max-width: 843px) {
+  .create-comment {
+    align-items: center;
+  }
+  .create-comment .comment-form form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .create-comment .comment-form textarea {
+    width: 569px;
   }
 }
 /* ! footer-section */
@@ -371,7 +382,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 360px) {
+@media (max-width: 834px) {
   footer {
     height: max-content;
     padding: 20px;
