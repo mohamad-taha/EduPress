@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: jost;
+}
+/* ! nav-section */
+nav {
+  padding: 5px 50px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+nav .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+nav .logo-container img {
+  width: 39px;
+}
+nav .logo-container p {
+  font-family: Exo;
+  font-weight: 700;
+  font-size: 28px;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 520px;
+  justify-content: space-between;
+}
+nav ul a {
+  text-decoration: none;
+  font-family: Exo;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+}
+nav ul .home {
+  transition: 0.2s;
+}
+nav ul a:active {
+  background-color: #f5f5f5;
+  color: #ff782d;
+}
+nav ul li :active path {
+  background-color: #f5f5f5;
+  fill: #ff782d;
+}
+nav .nav-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav .nav-actions a {
+  text-decoration: none;
+  color: Black;
+  font-weight: 500;
+  font-size: 18px;
+}
+nav .nav-actions .search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border-color: #ff782d;
+  border-style: solid;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .nav-actions .list-btn {
+  background-color: transparent;
+  display: none;
+  border: none;
+  cursor: pointer;
+}
+nav .nav-actions .list-btn img {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+  nav .nav-actions .search-btn,
+  nav .nav-actions a {
+    display: none;
+  }
+  nav .nav-actions .list-btn {
+    display: inline;
+  }
+}
+/* ! breadcrumbs-section */
+.breadcrumbs-container {
+  height: 60px;
+  background-color: #f5f5f5;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs-container p {
+  color: #555555;
+  display: flex;
+  gap: 15px;
+}
+.breadcrumbs-container p span {
+  color: #9d9d9d;
+}
+/* ! faqs-section */
+.faqs-container {
+  margin-top: 100px;
+  padding: 0 50px;
+}
+.faqs-container h2 {
+  font-family: Exo;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+.faqs-container .faq-cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 474px;
+  align-content: space-between;
+}
+.faqs-container .faq-cards .faq-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 530px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faqs-container .faq-cards .faq-card-active {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 530px;
+  padding: 20px 30px;
+  gap: 20px;
+}
+.faqs-container .faq-cards .faq-card-active div {
+  display: flex;
+  justify-content: space-between;
+}
+.faqs-container .faq-cards .faq-card p {
+  font-family: Exo;
+  font-weight: 600;
+}
+.faqs-container .faq-cards .faq-card-active div p {
+  font-family: Exo;
+  font-weight: 600;
+  color: #ff782d;
+}
+.faqs-container .faq-cards .faq-card-active > p {
+  font-size: 18px;
+  color: #555555;
+  width: 534px;
+}
+.faqs-container .faq-cards .faq-card path,
+.faqs-container .faq-cards .faq-card-active path {
+  fill: #9d9d9d;
+}
+.faqs-container > img {
+  margin-top: 50px;
+}
+@media (max-width: 360px) {
+  .faqs-container {
+    padding: 0;
+  }
+  .faqs-container h2{
+    margin-left: 20px;
+  }
+  .faqs-container .faq-cards {
+    height: max-content;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .faqs-container .faq-cards .faq-card,
+  .faqs-container .faq-cards .faq-card-active {
+    width: 270px;
+  }
+  .faqs-container .faq-cards .faq-card-active > p {
+    width: 280px;
+  }
+}
+/* ! footer-section */
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  align-items: center;
+  background-color: #f5f5f5;
+  height: 458px;
+  justify-content: space-evenly;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-content .logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+footer .footer-content .logo-container div {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+footer .footer-content .logo-container div img {
+  width: 39px;
+  height: 30px;
+}
+footer .footer-content .logo-container > p {
+  font-size: 18px;
+  width: 341px;
+  color: #555555;
+}
+footer .footer-content .logo-container div p {
+  font-family: Exo;
+  font-weight: 700;
+  font-size: 28px;
+}
+footer .contact,
+footer .footer-programs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+footer .contact p,
+footer .footer-programs p,
+footer .about-us p {
+  font-family: Exo;
+  font-weight: 600;
+  font-size: 20px;
+}
+footer .contact a,
+footer .footer-programs a {
+  font-weight: 500;
+  font-size: 18px;
+  color: #555555;
+  text-decoration: none;
+  line-height: 40px;
+  width: fit-content;
+}
+footer .footer-programs div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+footer .about-us > div {
+  display: flex;
+  flex-direction: column;
+  line-height: 45px;
+}
+footer .about-us .address,
+footer .about-us a {
+  font-size: 18px;
+  color: #555555;
+  text-decoration: none;
+  line-height: 27px;
+}
+footer .about-us .address {
+  width: 340px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+footer .about-us img {
+  margin-top: 27px;
+}
+footer a {
+  transition: 200ms;
+}
+footer a:hover {
+  color: #ff782d;
+}
+footer .about-us a img {
+  color: red;
+}
+footer .about-us path {
+  fill: #555555;
+  transition: 200ms;
+}
+footer .about-us a:hover path {
+  fill: #ff782d;
+}
+@media (max-width: 360px) {
+  footer {
+    height: max-content;
+    padding: 20px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  footer > p {
+    text-align: center;
+  }
+  footer .footer-content .logo-container p {
+    width: 320px;
+  }
+}
