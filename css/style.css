@@ -84,7 +84,22 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
+  nav {
+    padding: 5px 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .nav-actions .search-btn,
+  nav .nav-actions a {
+    display: none;
+  }
+  nav .nav-actions .list-btn {
+    display: inline;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
   nav ul {
     display: none;
   }
@@ -150,7 +165,7 @@ nav .nav-actions .list-btn img {
   width: 755px;
   height: 322px;
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .hero {
     height: 480px;
     padding: 0 20px;
@@ -171,7 +186,7 @@ nav .nav-actions .list-btn img {
     width: 320px;
   }
 }
-@media(min-width: 361px) and (max-width: 843px) {
+@media (min-width: 431px) and (max-width: 884px) {
   .hero .hero-imgs {
     display: none;
   }
@@ -345,7 +360,7 @@ nav .nav-actions .list-btn img {
   color: black;
 }
 /* ! top-categories-section & featured-courses-section */
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .top-categories {
     padding: 0 20px;
   }
@@ -375,7 +390,7 @@ nav .nav-actions .list-btn img {
     display: inline;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 884px) {
   .featured-courses-cards {
     justify-content: center;
     gap: 35px;
@@ -419,7 +434,7 @@ nav .nav-actions .list-btn img {
   padding: 10px 24px;
   border-style: none;
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .explore-courses {
     margin: 0;
     margin-bottom: 100px;
@@ -433,17 +448,17 @@ nav .nav-actions .list-btn img {
     width: 300px;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 884px) {
   .explore-courses {
     height: fit-content;
     background-size: cover;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 20px;
-}
-.explore-courses p{
-  width: 290px;
-}
+  }
+  .explore-courses p {
+    width: 290px;
+  }
 }
 /* ! stat-online */
 .stat-online {
@@ -473,14 +488,14 @@ nav .nav-actions .list-btn img {
   font-size: 18px;
   font-weight: 500;
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .stat-online {
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 884px) {
   .stat-online {
     gap: 30px;
   }
@@ -517,7 +532,25 @@ nav .nav-actions .list-btn img {
   font-size: 18px;
   gap: 8px;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
+  .skills-container {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  .skills-container img {
+    width: 100%;
+  }
+  .skills-container div {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .skills-container p,
+  .skills-container h2 {
+    width: 320px;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
   .skills-container {
     flex-direction: column-reverse;
   }
@@ -581,7 +614,7 @@ nav .nav-actions .list-btn img {
   padding: 10px 24px;
   border-radius: 24px;
 }
-@media (max-width: 834px) {
+@media (max-width: 884px) {
   .join-us-container {
     margin: 0;
     flex-direction: column;
@@ -707,10 +740,25 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
   footer {
     height: max-content;
     padding: 20px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  footer .footer-content .logo-container p {
+    width: 320px;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
+  footer {
+    height: max-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   footer .footer-content {
     flex-direction: column;

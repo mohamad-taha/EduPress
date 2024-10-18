@@ -84,7 +84,22 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 843px) {
+@media (max-width: 430px) {
+  nav {
+    padding: 5px 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .nav-actions .search-btn,
+  nav .nav-actions a {
+    display: none;
+  }
+  nav .nav-actions .list-btn {
+    display: inline;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
   nav ul {
     display: none;
   }
@@ -276,7 +291,7 @@ nav .nav-actions .list-btn img {
 .all-courses .all-courses-footer ul li path {
   fill: black;
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .all-courses {
     padding: 0;
   }
@@ -306,9 +321,9 @@ nav .nav-actions .list-btn img {
     width: 100%;
   }
 }
-@media(min-width: 361px) and (max-width: 843px) {
+@media(min-width: 431px) and (max-width: 884px) {
   .all-courses .all-courses-cards .all-courses-card{
-  width: 330px;
+  width: 310px;
 }
 }
 /* ! footer-section */
@@ -422,10 +437,27 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
   footer {
     height: max-content;
     padding: 20px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  footer > p {
+    text-align: center;
+  }
+  footer .footer-content .logo-container p {
+    width: 320px;
+  }
+}
+@media (min-width:431px) and (max-width: 884px) {
+  footer {
+    height: max-content;
+    padding: 50px;
   }
   footer .footer-content {
     flex-direction: column;

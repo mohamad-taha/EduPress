@@ -84,7 +84,22 @@ nav .nav-actions .list-btn img {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
+  nav {
+    padding: 5px 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .nav-actions .search-btn,
+  nav .nav-actions a {
+    display: none;
+  }
+  nav .nav-actions .list-btn {
+    display: inline;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
   nav ul {
     display: none;
   }
@@ -174,7 +189,7 @@ nav .nav-actions .list-btn img {
 .faqs-container > img {
   margin-top: 50px;
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .faqs-container {
     padding: 0;
   }
@@ -194,7 +209,7 @@ nav .nav-actions .list-btn img {
     width: 280px;
   }
 }
-@media (min-width: 361px) and (max-width: 843px) {
+@media (min-width: 431px) and (max-width: 884px) {
   .faqs-container .faq-cards {
     height: fit-content;
   }
@@ -308,10 +323,27 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: #ff782d;
 }
-@media (max-width: 834px) {
+@media (max-width: 430px) {
   footer {
     height: max-content;
     padding: 20px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  footer > p {
+    text-align: center;
+  }
+  footer .footer-content .logo-container p {
+    width: 320px;
+  }
+}
+@media (min-width: 431px) and (max-width: 884px) {
+  footer {
+    height: max-content;
+    padding: 50px;
   }
   footer .footer-content {
     flex-direction: column;
