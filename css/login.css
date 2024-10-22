@@ -1,142 +1,13 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: jost;
-}
-/* ! nav-section */
-nav {
-  padding: 5px 50px;
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
-}
-nav .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  cursor: default;
-}
-nav .logo-container img {
-  width: 39px;
-}
-nav .logo-container p {
-  font-family: Exo;
-  font-weight: 700;
-  font-size: 28px;
-}
-nav ul {
-  display: flex;
-  list-style-type: none;
-  width: 520px;
-  justify-content: space-between;
-}
-nav ul a {
-  text-decoration: none;
-  font-family: Exo;
-  font-weight: 600;
-  color: black;
-  display: flex;
-  align-items: center;
-  height: 50px;
-  padding: 0 10px;
-}
-nav ul .home {
-  transition: 0.2s;
-}
-nav ul a:active {
-  background-color: #f5f5f5;
-  color: #ff782d;
-}
-nav ul li :active path {
-  background-color: #f5f5f5;
-  fill: #ff782d;
-}
-nav .nav-actions {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-nav .nav-actions a {
-  text-decoration: none;
-  color: Black;
-  font-weight: 500;
-  font-size: 18px;
-}
-nav .nav-actions .search-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  border-color: #ff782d;
-  border-style: solid;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-nav .nav-actions .list-btn {
-  background-color: transparent;
-  display: none;
-  border: none;
-  cursor: pointer;
-}
-nav .nav-actions .list-btn img {
-  width: 24px;
-  height: 24px;
-}
-@media (max-width: 430px) {
-  nav {
-    padding: 5px 20px;
-  }
-  nav ul {
-    display: none;
-  }
-  nav .nav-actions .search-btn,
-  nav .nav-actions a {
-    display: none;
-  }
-  nav .nav-actions .list-btn {
-    display: inline;
-  }
-}
-@media (min-width: 431px) and (max-width: 884px) {
-  nav ul {
-    display: none;
-  }
-  nav .nav-actions .search-btn,
-  nav .nav-actions a {
-    display: none;
-  }
-  nav .nav-actions .list-btn {
-    display: inline;
-  }
-}
-/* ! breadcrumbs-section */
-.breadcrumbs-container {
-  height: 60px;
-  background-color: #f5f5f5;
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-}
-.breadcrumbs-container p {
-  color: #555555;
-  display: flex;
-  gap: 15px;
-}
-.breadcrumbs-container p span {
-  color: #9d9d9d;
-}
 /* ! sign-in-section */
 .sign-in-up {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  margin-top: 100px;
+  padding: 0 70px;
+  margin-top: 70px;
 }
 .sign-in-up .login-form,
 .sign-in-up .register {
-  width: 609px;
+  width: 580px;
   border-color: #eaeaea;
   border-radius: 20px;
   border-width: 1px;
@@ -162,9 +33,9 @@ nav .nav-actions .list-btn img {
   border-radius: 8px;
   border-width: 1px;
   padding: 10px 16px;
-  border-color: #9d9d9d;
+  border-color: var(--grey-color);
   border-style: solid;
-  outline-color: #ff782d;
+  outline-color: var(--primary-color);
   outline-width: 1px;
   font-size: 18px;
 }
@@ -186,7 +57,7 @@ nav .nav-actions .list-btn img {
   gap: 8px;
 }
 .sign-in-up form > button {
-  background-color: #ff782d;
+  background-color: var(--primary-color);
   border-radius: 24px;
   padding: 10px 24px;
   color: white;
@@ -195,13 +66,13 @@ nav .nav-actions .list-btn img {
   font-size: 18px;
 }
 .sign-in-up form label {
-  color: #555555;
+  color: var(--dark-gray);
   font-size: 18px;
 }
 .sign-in-up form > a {
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: var(--black-color);
 }
 @media (max-width: 430px) {
   .sign-in-up {
@@ -221,8 +92,9 @@ nav .nav-actions .list-btn img {
     left: 85%;
   }
 }
-@media (min-width: 431px) and (max-width: 884px) {
+@media (min-width: 431px) and (max-width: 892px) {
   .sign-in-up {
+    padding: 0 50px;
     flex-direction: column;
     gap: 30px;
     align-items: center;
@@ -235,7 +107,7 @@ footer {
   padding: 0 50px;
   align-items: center;
   margin-top: 50px;
-  background-color: #f5f5f5;
+  background-color: var(--light-gray);
   height: 458px;
   justify-content: space-evenly;
 }
@@ -262,7 +134,7 @@ footer .footer-content .logo-container div img {
 footer .footer-content .logo-container > p {
   font-size: 18px;
   width: 341px;
-  color: #555555;
+  color: var(--dark-gray);
 }
 footer .footer-content .logo-container div p {
   font-family: Exo;
@@ -286,7 +158,7 @@ footer .contact a,
 footer .footer-programs a {
   font-weight: 500;
   font-size: 18px;
-  color: #555555;
+  color: var(--dark-gray);
   text-decoration: none;
   line-height: 40px;
   width: fit-content;
@@ -310,7 +182,7 @@ footer .about-us > div {
 footer .about-us .address,
 footer .about-us a {
   font-size: 18px;
-  color: #555555;
+  color: var(--dark-gray);
   text-decoration: none;
   line-height: 27px;
 }
@@ -326,17 +198,17 @@ footer a {
   transition: 200ms;
 }
 footer a:hover {
-  color: #ff782d;
+  color: var(--primary-color);
 }
 footer .about-us a img {
   color: red;
 }
 footer .about-us path {
-  fill: #555555;
+  fill: var(--dark-gray);
   transition: 200ms;
 }
 footer .about-us a:hover path {
-  fill: #ff782d;
+  fill: var(--primary-color);
 }
 @media (max-width: 430px) {
   footer {
@@ -355,7 +227,7 @@ footer .about-us a:hover path {
     width: 320px;
   }
 }
-@media (min-width: 431px) and (max-width: 884px) {
+@media (min-width: 431px) and (max-width: 892px) {
   footer {
     height: max-content;
     padding: 50px;
