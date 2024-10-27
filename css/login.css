@@ -74,6 +74,7 @@
   }
   .sign-in-up form {
     width: 280px;
+    padding: 10px;
   }
   .sign-in-up .login-form,
   .sign-in-up .register {

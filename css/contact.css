@@ -50,11 +50,11 @@ iframe {
     padding: 0 50px;
     align-items: flex-start;
   }
-  .contact-container .contact-info ,
-    .contact-container .contact-info .contact-link {
+  .contact-container .contact-info,
+  .contact-container .contact-info .contact-link {
     width: 100%;
   }
-  .contact-container .contact-info  p {
+  .contact-container .contact-info p {
     width: 100%;
   }
   iframe {
@@ -126,17 +126,17 @@ iframe {
     padding: 0 20px;
   }
   .create-comment > p {
-    width: 325px;
+    width: 100%;
   }
   .create-comment .comment-form form {
     flex-direction: column;
-    width: 300px;
+    width: 100%px;
   }
   .create-comment .comment-form form .contact-input {
-    width: 200px;
+    width: 100%;
   }
   .create-comment .comment-form form textarea {
-    width: 300px;
+    width: 100%;
   }
 }
 @media (min-width: 431px) and (max-width: 892px) {

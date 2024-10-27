@@ -8,6 +8,7 @@
   font-weight: 600;
   font-size: 36px;
   margin-bottom: 50px;
+  width: fit-content;
 }
 .faqs-container .faq-cards {
   display: flex;
@@ -47,11 +48,13 @@
   font-family: Exo;
   font-weight: 600;
   color: var(--primary-color);
+  width: 100%;
+  
 }
 .faqs-container .faq-cards .faq-card-active > p {
   font-size: 18px;
   color: var(--dark-gray);
-  width: 534px;
+  width: 100%;
 }
 .faqs-container .faq-cards .faq-card path,
 .faqs-container .faq-cards .faq-card-active path {
@@ -67,11 +70,10 @@
   .faqs-container .faq-cards {
     height: max-content;
     align-items: center;
-    flex-wrap: nowrap;
   }
   .faqs-container .faq-cards .faq-card,
   .faqs-container .faq-cards .faq-card-active {
-    width: 270px;
+    width: 100%;
   }
   .faqs-container .faq-cards .faq-card-active > p {
     width: 100%;

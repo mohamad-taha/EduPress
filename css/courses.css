@@ -171,15 +171,14 @@
     left: 92%;
   }
   .all-courses .all-courses-header div{
-    align-self: center;
-    width: 335px;
+    width: 100%;
   }
   .all-courses-cards {
     flex-direction: column;
     align-items: center;
   }
   .all-courses-card {
-    width: 330px;
+    width: 100%;
     text-align: left;
   }
   .all-courses-card > img {

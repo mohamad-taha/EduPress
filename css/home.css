@@ -36,7 +36,7 @@
   }
   .hero h1 {
     font-size: 32px;
-    width: 320px;
+    width: 100%;
   }
 }
 @media (min-width: 431px) and (max-width: 892px) {
@@ -231,7 +231,7 @@
     justify-content: center;
   }
   .featured-courses-card {
-    width: 330px;
+    width: 100%;
     text-align: left;
   }
 .featured-courses-card .card-title{
@@ -387,7 +387,7 @@
   }
   .skills-container p,
   .skills-container h2 {
-    width: 320px;
+    width: 100%;
   }
 }
 @media (min-width: 431px) and (max-width: 892px) {

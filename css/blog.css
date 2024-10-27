@@ -135,7 +135,7 @@
     left: 92%;
   }
   .all-articles .all-articles-header div {
-    width: 320px;
+    width: 100%;
     align-self: center;
   }
   .all-articles-cards {
@@ -143,17 +143,17 @@
     align-items: center;
   }
   .all-articles-card {
-    width: 330px;
+    width: 100%;
     text-align: left;
   }
   .all-articles-card > img {
     width: 100%;
   }
   .all-articles-card .card-content p {
-    width: 300px;
+    width: 100%;
   }
   .all-articles-card .card-title {
-    width: 300px;
+    width: 100%;
   }
 }
 @media (min-width: 431px) and (max-width: 892px) {
