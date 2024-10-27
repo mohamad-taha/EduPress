@@ -1,4 +1,4 @@
-/* ! sign-in-section */
+/*  --------------------------------------------------------------sign-in-section-------------------------------------------------------------------------- */
 .sign-in-up {
   display: flex;
   justify-content: space-between;
@@ -56,15 +56,6 @@
   align-items: center;
   gap: 8px;
 }
-.sign-in-up form > button {
-  background-color: var(--primary-color);
-  border-radius: 24px;
-  padding: 10px 24px;
-  color: white;
-  border-style: none;
-  font-weight: 500;
-  font-size: 18px;
-}
 .sign-in-up form label {
   color: var(--dark-gray);
   font-size: 18px;
@@ -98,149 +89,5 @@
     flex-direction: column;
     gap: 30px;
     align-items: center;
-  }
-}
-/* ! footer-section */
-footer {
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  align-items: center;
-  margin-top: 50px;
-  background-color: var(--light-gray);
-  height: 458px;
-  justify-content: space-evenly;
-}
-footer .footer-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-footer .footer-content .logo-container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-footer .footer-content .logo-container div {
-  display: flex;
-  gap: 3px;
-  align-items: center;
-}
-footer .footer-content .logo-container div img {
-  width: 39px;
-  height: 30px;
-}
-footer .footer-content .logo-container > p {
-  font-size: 18px;
-  width: 341px;
-  color: var(--dark-gray);
-}
-footer .footer-content .logo-container div p {
-  font-family: Exo;
-  font-weight: 700;
-  font-size: 28px;
-}
-footer .contact,
-footer .footer-programs {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-footer .contact p,
-footer .footer-programs p,
-footer .about-us p {
-  font-family: Exo;
-  font-weight: 600;
-  font-size: 20px;
-}
-footer .contact a,
-footer .footer-programs a {
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--dark-gray);
-  text-decoration: none;
-  line-height: 40px;
-  width: fit-content;
-}
-footer .footer-programs div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-footer .about-us {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-}
-footer .about-us > div {
-  display: flex;
-  flex-direction: column;
-  line-height: 45px;
-}
-footer .about-us .address,
-footer .about-us a {
-  font-size: 18px;
-  color: var(--dark-gray);
-  text-decoration: none;
-  line-height: 27px;
-}
-footer .about-us .address {
-  width: 340px;
-  font-weight: 400;
-  margin-bottom: 27px;
-}
-footer .about-us img {
-  margin-top: 27px;
-}
-footer a {
-  transition: 200ms;
-}
-footer a:hover {
-  color: var(--primary-color);
-}
-footer .about-us a img {
-  color: red;
-}
-footer .about-us path {
-  fill: var(--dark-gray);
-  transition: 200ms;
-}
-footer .about-us a:hover path {
-  fill: var(--primary-color);
-}
-@media (max-width: 430px) {
-  footer {
-    height: max-content;
-    padding: 20px;
-  }
-  footer .footer-content {
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 20px;
-  }
-  footer > p {
-    text-align: center;
-  }
-  footer .footer-content .logo-container p {
-    width: 320px;
-  }
-}
-@media (min-width: 431px) and (max-width: 892px) {
-  footer {
-    height: max-content;
-    padding: 50px;
-  }
-  footer .footer-content {
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 20px;
-  }
-  footer > p {
-    text-align: center;
-  }
-  footer .footer-content .logo-container p {
-    width: 320px;
   }
 }
