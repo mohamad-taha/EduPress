@@ -63,7 +63,7 @@
 .faqs-container > img {
   margin-top: 50px;
 }
-@media (max-width: 430px) {
+@media (max-width: 631px) {
   .faqs-container {
     padding: 0 20px;
   }
@@ -82,7 +82,7 @@
     width: 100%;
   }
 }
-@media (min-width: 431px) and (max-width: 892px) {
+@media (min-width: 631px) and (max-width: 1024px) {
   .faqs-container {
     padding: 0 50px;
   }

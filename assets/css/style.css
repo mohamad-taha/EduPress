@@ -116,7 +116,7 @@ nav .nav-actions .list-btn img {
   width: 20px;
   height: 20px;
 }
-@media (max-width: 430px) {
+@media (max-width: 631px) {
   nav {
     padding: 0 20px;
   }
@@ -131,7 +131,7 @@ nav .nav-actions .list-btn img {
     display: block;
   }
 }
-@media (min-width: 431px) and (max-width: 892px) {
+@media (min-width: 631px) and (max-width: 1024px) {
   nav {
     padding: 0 50px;
   }
@@ -163,12 +163,12 @@ nav .nav-actions .list-btn img {
 .breadcrumbs-container p span {
   color: var(--grey-color);
 }
-@media (max-width: 430px) {
+@media (max-width: 631px) {
   .breadcrumbs-container {
     padding: 0 20px;
   }
 }
-@media (min-width: 431px) and (max-width: 892px) {
+@media (min-width: 631px) and (max-width: 1024px) {
   .breadcrumbs-container {
     padding: 0 50px;
   }
@@ -188,6 +188,7 @@ footer .footer-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 20px;
 }
 footer .footer-content .logo-container {
   display: flex;
@@ -250,7 +251,6 @@ footer .about-us {
 footer .about-us > div {
   display: flex;
   flex-direction: column;
-  line-height: 45px;
 }
 footer .about-us .address,
 footer .about-us a {
@@ -283,7 +283,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: var(--primary-color);
 }
-@media (max-width: 430px) {
+@media (max-width: 631px) {
   footer {
     height: max-content;
     padding: 20px;
@@ -303,7 +303,7 @@ footer .about-us a:hover path {
     width: 100%;
   }
 }
-@media (min-width: 431px) and (max-width: 892px) {
+@media (min-width: 631px) and (max-width: 1024px) {
   footer {
     height: max-content;
     padding: 50px;
