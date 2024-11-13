@@ -159,7 +159,7 @@
 .all-courses .all-courses-footer ul li path {
   fill: var(--black-color);
 }
-@media (max-width: 631px) {
+@media (max-width: 639px) {
   .all-courses {
     padding: 0 20px;
   }
@@ -188,7 +188,7 @@
     width: 100%;
   }
 }
-@media (min-width: 631px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   .all-courses {
     padding: 0 50px;
   }

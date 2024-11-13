@@ -65,7 +65,7 @@
   font-size: 18px;
   color: var(--black-color);
 }
-@media (max-width: 631px) {
+@media (max-width: 639px) {
   .sign-in-up {
     flex-direction: column;
     padding: 0 20px;
@@ -84,7 +84,7 @@
     left: 85%;
   }
 }
-@media (min-width: 631px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   .sign-in-up {
     padding: 0 50px;
     flex-direction: column;

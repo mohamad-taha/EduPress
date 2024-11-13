@@ -77,12 +77,10 @@ nav ul li a {
   height: 70px;
   padding: 0 10px;
 }
-nav ul a:active {
+.active {
   background-color: var(--light-gray);
-  color: var(--primary-color);
-}
-nav ul li :active path {
   fill: var(--primary-color);
+  color: var(--primary-color);
 }
 nav .nav-actions {
   display: flex;
@@ -116,7 +114,7 @@ nav .nav-actions .list-btn img {
   width: 20px;
   height: 20px;
 }
-@media (max-width: 631px) {
+@media (max-width: 639px) {
   nav {
     padding: 0 20px;
   }
@@ -131,7 +129,7 @@ nav .nav-actions .list-btn img {
     display: block;
   }
 }
-@media (min-width: 631px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   nav {
     padding: 0 50px;
   }
@@ -163,12 +161,12 @@ nav .nav-actions .list-btn img {
 .breadcrumbs-container p span {
   color: var(--grey-color);
 }
-@media (max-width: 631px) {
+@media (max-width: 639px) {
   .breadcrumbs-container {
     padding: 0 20px;
   }
 }
-@media (min-width: 631px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   .breadcrumbs-container {
     padding: 0 50px;
   }
@@ -283,7 +281,7 @@ footer .about-us path {
 footer .about-us a:hover path {
   fill: var(--primary-color);
 }
-@media (max-width: 631px) {
+@media (max-width: 639px) {
   footer {
     height: max-content;
     padding: 20px;
@@ -303,7 +301,7 @@ footer .about-us a:hover path {
     width: 100%;
   }
 }
-@media (min-width: 631px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   footer {
     height: max-content;
     padding: 50px;
