@@ -12,29 +12,39 @@
 }
 .faqs-container .faq-cards {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
-  height: 474px;
-  align-content: space-between;
 }
 .faqs-container .faq-cards .faq-card {
-  background-color: var(--light-gray);
-  border-radius: 8px;
-  width: 530px;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faqs-container .faq-cards .faq-card-active {
+  justify-content: center;
+  transition: 300ms;
+  height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background-color: var(--light-gray);
   border-radius: 8px;
   width: 530px;
-  padding: 20px 30px;
-  gap: 20px;
+  padding: 20px;
+  gap: 10px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  > p {
+    display: none;
+    transition: 300ms;
+    line-height: 30px;
+  }
+  img {
+    transition: 300ms;
+    width: 20px;
+  }
 }
 .faqs-container .faq-cards .faq-card-active div {
   display: flex;
@@ -49,7 +59,6 @@
   font-weight: 600;
   color: var(--primary-color);
   width: 100%;
-  
 }
 .faqs-container .faq-cards .faq-card-active > p {
   font-size: 18px;
@@ -71,12 +80,13 @@
     height: max-content;
     align-items: center;
   }
-  .faqs-container .faq-cards .faq-card,
-  .faqs-container .faq-cards .faq-card-active {
+  .faqs-container .faq-cards .faq-card {
     width: 100%;
+    height: max-content;
   }
-  .faqs-container .faq-cards .faq-card-active > p {
+  .faqs-container .faq-cards .faq-card > p {
     width: 100%;
+    line-height: normal;
   }
   .faqs-container > img {
     width: 100%;

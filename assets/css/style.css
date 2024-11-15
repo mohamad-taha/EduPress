@@ -6,10 +6,17 @@
   font-family: jost;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  background-color: #555555;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff782d;
+  border-radius: 10px;
+}
 :root {
   --primary-color: #ff782d;
   --black-color: #000000;
-  --grey-color: #9d9d9d;
+  --grey-color: #281a1a;
   --dark-gray: #555555;
   --light-gray: #f5f5f5;
 }
@@ -46,28 +53,38 @@ nav {
   z-index: 10;
   top: 0;
   background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 nav .logo-container {
   display: flex;
   align-items: center;
   gap: 4px;
   cursor: default;
 }
+
 nav .logo-container img {
-  width: 39px;
+  width: 50px;
+  object-fit: cover;
 }
+
 nav .logo-container p {
   font-family: Exo;
   font-weight: 700;
   font-size: 28px;
+  margin-left: 10px;
 }
+
 nav ul {
   display: flex;
   list-style-type: none;
   width: 520px;
   justify-content: space-between;
 }
-nav ul li a {
+
+nav ul li > a,
+nav ul li button div {
+  font-size: 16px;
   text-decoration: none;
   font-family: Exo;
   font-weight: 600;
@@ -76,23 +93,64 @@ nav ul li a {
   align-items: center;
   height: 70px;
   padding: 0 10px;
+  transition: background-color 0.3s ease;
 }
+
+nav ul li button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+}
+
+nav ul li button .drop-down {
+  transition: 300ms;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 80px;
+  text-align: left;
+  gap: 5px;
+}
+
+nav ul li button .drop-down a {
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  color: var(--black-color);
+  width: 100%;
+  transition: 300ms;
+}
+
+.drop-down a:active {
+  background-color: rgb(236, 236, 236);
+}
+
 .active {
   background-color: var(--light-gray);
   fill: var(--primary-color);
   color: var(--primary-color);
 }
+
 nav .nav-actions {
   display: flex;
   gap: 20px;
   align-items: center;
 }
+
 nav .nav-actions a {
   text-decoration: none;
   color: var(--black-color);
   font-weight: 500;
   font-size: 18px;
 }
+
 nav .nav-actions .search-btn {
   width: 40px;
   height: 40px;
@@ -104,16 +162,55 @@ nav .nav-actions .search-btn {
   align-items: center;
   justify-content: center;
 }
+
 nav .nav-actions .list-btn {
   background-color: transparent;
   display: none;
   border: none;
   cursor: pointer;
 }
+
 nav .nav-actions .list-btn img {
   width: 20px;
   height: 20px;
 }
+
+.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav .side-bar {
+  align-items: flex-start;
+  transition: transform 300ms;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+  transform: translateX(100%);
+  height: 100vh;
+  width: max-content;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav .side-bar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav .side-bar a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--black-color);
+  width: max-content;
+}
+
 @media (max-width: 639px) {
   nav {
     padding: 0 20px;
@@ -129,6 +226,7 @@ nav .nav-actions .list-btn img {
     display: block;
   }
 }
+
 @media (min-width: 640px) and (max-width: 1024px) {
   nav {
     padding: 0 50px;
