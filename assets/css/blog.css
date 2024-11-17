@@ -61,66 +61,11 @@
 }
 
 .all-articles .all-articles-header > div button path {
-  fill: var(--black-color);
+  transition: 300ms;
 }
 
-.all-articles .all-articles-header > div button:active path {
+.all-articles .all-articles-header > div button:hover path {
   fill: var(--primary-color);
-}
-
-.all-articles-cards {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-}
-
-.all-articles-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 22px;
-  border-style: solid;
-  border-color: #eaeaea;
-  justify-content: space-between;
-  height: 420px;
-  padding-bottom: 20px;
-  width: 370px;
-  box-sizing: border-box;
-}
-
-.all-articles-card div {
-  margin: 0 20px;
-}
-
-.all-articles-card .card-title {
-  font-size: 20px;
-  font-weight: 600;
-  font-family: Exo;
-  width: 345px;
-  line-height: 24px;
-  margin: 0;
-}
-
-.all-articles-card .card-info {
-  color: var(--dark-gray);
-}
-
-.all-articles .card-content p {
-  font-size: 18px;
-  color: var(--dark-gray);
-  width: 345px;
-  margin: 0;
-}
-
-.all-articles-card .card-info img {
-  margin-right: 5px;
-}
-
-.all-articles-card .card-info p {
-  display: flex;
-  align-items: center;
 }
 
 .all-articles .all-articles-footer ul {
@@ -177,37 +122,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-  .all-articles-cards {
-    justify-content: center;
-  }
-  .all-articles-card {
-    width: 100%;
-    height: max-content;
-    text-align: left;
-  }
-  .all-articles .card-content p {
-    width: 100%;
-  }
-  .all-articles-card > img {
-    width: 100%;
-  }
-  .all-articles .all-articles-cards .all-articles-card .card-title {
-    width: 100%;
+    button {
+      display: none;
+    }
   }
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   .all-articles {
     padding: 0 50px;
-  }
-  .all-articles-cards {
-    justify-content: center;
-  }
-  .all-articles .all-articles-cards .all-articles-card {
-    width: 300px;
-  }
-  .all-articles .all-articles-cards .all-articles-card p {
-    width: 100%;
   }
 }

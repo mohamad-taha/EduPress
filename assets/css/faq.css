@@ -13,7 +13,7 @@
 .faqs-container .faq-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 .faqs-container .faq-cards .faq-card {
   justify-content: center;
@@ -87,6 +87,7 @@
   .faqs-container .faq-cards .faq-card > p {
     width: 100%;
     line-height: normal;
+    overflow-y: scroll;
   }
   .faqs-container > img {
     width: 100%;

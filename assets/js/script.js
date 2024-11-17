@@ -105,3 +105,56 @@ faqBtn.forEach((btn, id) => {
     cardStatus = faqOpen ? null : id;
   });
 });
+
+/* ------------------------------courses/articles-------------------------------- */
+const cardsContainer = document.querySelector(".cards-container");
+const card = document.querySelectorAll(".card");
+const gridBtnStyle = document.querySelector(".grid-style-btn");
+const listBtnStyle = document.querySelector(".list-style-btn");
+const gridBtnStyleIcn = document.querySelector(".grid-style-btn path");
+const listBtnStyleIcn = document.querySelector(".list-style-btn path");
+const cardBody = document.querySelectorAll(".card > div");
+const cardFooter = document.querySelectorAll(".card-footer");
+
+listBtnStyle.addEventListener("click", () => {
+  listBtnStyleIcn.style.fill = "var(--primary-color)";
+  gridBtnStyleIcn.style.fill = "var(--black-color)";
+  cardsContainer.classList.remove("grid-style");
+  cardsContainer.classList.add("list-style");
+  card.forEach((card) => {
+    card.style.transform = "scale(0.8)";
+
+    setTimeout(() => {
+      card.style.transform = "scale(1)";
+    }, 100);
+
+    card.classList.remove("grid-style-card");
+    card.classList.add("list-style-card");
+
+    cardBody.forEach((body) => {
+      body.style = "justify-content:space-around;width:100%";
+    });
+
+    cardFooter.forEach((footer) => {
+      footer.style = "margin:0;width:100%;padding:0;padding-top:20px";
+    });
+  });
+});
+
+gridBtnStyle.addEventListener("click", () => {
+  gridBtnStyleIcn.style.fill = "var(--primary-color)";
+  listBtnStyleIcn.style.fill = "var(--black-color)";
+  cardsContainer.classList.remove("list-style");
+  cardsContainer.classList.add("grid-style");
+
+  card.forEach((card) => {
+    card.style.transform = "scale(0.8)";
+
+    setTimeout(() => {
+      card.style.transform = "scale(1)";
+    }, 100);
+
+    card.classList.remove("list-style-card");
+    card.classList.add("grid-style-card");
+  });
+});

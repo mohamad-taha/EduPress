@@ -88,13 +88,13 @@
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M9.16667 3.33341C5.94501 3.33341 3.33334 5.94509 3.33334 9.16675C3.33334 12.3884 5.94501 15.0001 9.16667 15.0001C12.3883 15.0001 15 12.3884 15 9.16675C15 5.94509 12.3883 3.33341 9.16667 3.33341ZM1.66667 9.16675C1.66667 5.02461 5.02454 1.66675 9.16667 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 13.3089 13.3088 16.6667 9.16667 16.6667C5.02454 16.6667 1.66667 13.3089 1.66667 9.16675Z"
-                  fill="#FF782D"
+                  fill="black"
                 />
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M13.2858 13.2858C13.6112 12.9604 14.1388 12.9604 14.4643 13.2858L18.0893 16.9108C18.4147 17.2363 18.4147 17.7639 18.0893 18.0893C17.7638 18.4148 17.2362 18.4148 16.9108 18.0893L13.2858 14.4643C12.9603 14.1389 12.9603 13.6113 13.2858 13.2858Z"
-                  fill="#FF782D"
+                  fill="black"
                 /></svg
             ></label>
             <input
@@ -104,7 +104,7 @@
               id="course-name"
             />
           </div>
-          <button>
+          <button class="grid-style-btn">
             <svg
               width="20"
               height="20"
@@ -120,7 +120,7 @@
               />
             </svg>
           </button>
-          <button>
+          <button class="list-style-btn">
             <svg
               width="20"
               height="20"
@@ -143,101 +143,113 @@
           </button>
         </div>
       </div>
-      <div class="all-courses-cards">
-        <div class="all-courses-card">
+      <div class="cards-container">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-1.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div>
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
-        <div class="all-courses-card">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-2.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div class="card-content">
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
-        <div class="all-courses-card">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-3.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div class="card-content">
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
-        <div class="all-courses-card">
+        <div class="card">
           <img src="./assets/imgs/card-img6.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div class="card-content">
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
-        <div class="all-courses-card">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-5.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div class="card-content">
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
-        <div class="all-courses-card">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-6.svg" alt="card-img" />
           <p>Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div class="card-content">
+              <p class="created-by"><span>by</span>Determined-Poitras</p>
+              <p class="card-title">Create an LMS Website with LearnPress</p>
+            </div>
+            <div class="card-info">
+              <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
+              <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> Free</p>
+              <a href="">View More</a>
+            </div>
           </div>
         </div>
       </div>
