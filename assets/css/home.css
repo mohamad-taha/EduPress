@@ -71,6 +71,7 @@
 }
 .categories-header button,
 .courses-header button {
+  color: var(--text-color);
   font-size: 18px;
   font-weight: 500;
   background-color: transparent;
@@ -116,7 +117,7 @@
   font-family: Exo;
   font-weight: 600;
   font-size: 20px;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 .top-categories-card p {
   color: var(--dark-gray);
@@ -203,7 +204,7 @@
   font-size: 18px;
 }
 .featured-courses-card .card-footer del {
-  color: var(--grey-color);
+  color: var(--text-color);
   font-size: 18px;
   margin-right: 3px;
 }
@@ -211,7 +212,7 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 /*  ------------------------------------------------top-categories-section & featured-courses-section----------------------------------------------------- */
 @media (max-width: 639px) {
@@ -309,9 +310,11 @@
   justify-content: space-between;
   padding: 0 70px;
   flex-wrap: wrap;
+  color: var(--text-color);
 }
 .stat-online div {
-  background-color: var(--light-gray);
+  border: solid 1px;
+  background-color: var(--bg-color);
   border-radius: 20px;
   width: 284px;
   display: flex;

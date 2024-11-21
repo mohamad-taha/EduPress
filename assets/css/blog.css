@@ -36,20 +36,22 @@
 
 .all-articles .all-articles-header > div > div label {
   position: absolute;
-  left: 93%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 90%;
+  top: 10px;
 }
 
 .all-articles .all-articles-header > div > div input {
   border-style: none;
-  border-bottom-style: solid;
   outline-style: none;
-  border-color: var(--black-color);
   border-width: 1px;
   width: 100%;
-  padding-right: 20px;
-  box-sizing: border-box;
+  padding: 20px;
+  height: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .all-articles .all-articles-header > div button {
@@ -62,10 +64,7 @@
 
 .all-articles .all-articles-header > div button path {
   transition: 300ms;
-}
-
-.all-articles .all-articles-header > div button:hover path {
-  fill: var(--primary-color);
+  fill: var(--text-color);
 }
 
 .all-articles .all-articles-footer ul {
@@ -77,7 +76,9 @@
   padding: 0;
 }
 
-.all-articles .all-articles-footer ul li a {
+.all-articles .all-articles-footer ul li button {
+  cursor: pointer;
+  border-style: none;
   text-decoration: none;
   color: var(--black-color);
   font-weight: 500;
@@ -90,19 +91,6 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-}
-
-.all-articles .all-articles-footer ul li:active {
-  background-color: var(--black-color);
-  color: white;
-}
-
-.all-articles .all-articles-footer ul li:active path {
-  fill: white;
-}
-
-.all-articles .all-articles-footer ul li path {
-  fill: var(--black-color);
 }
 
 @media (max-width: 639px) {

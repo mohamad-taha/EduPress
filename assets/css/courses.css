@@ -25,19 +25,24 @@
 }
 .all-courses .all-courses-header > div > div label {
   position: absolute;
-  left: 93%;
+  left: 90%;
+  top: 10px;
 }
 .all-courses .all-courses-header > div > div label path {
   fill: var(--black-color);
 }
 .all-courses .all-courses-header > div > div input {
   border-style: none;
-  border-bottom-style: solid;
   outline-style: none;
-  border-color: var(--black-color);
   border-width: 1px;
   width: 100%;
-  padding-right: 20px;
+  padding: 20px;
+  height: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .all-courses .all-courses-header > div button {
   background-color: transparent;
@@ -48,6 +53,7 @@
 }
 .all-courses .all-courses-header > div button path {
   transition: 300ms;
+  fill: var(--text-color);
 }
 
 .all-courses .all-courses-footer ul {
@@ -57,7 +63,9 @@
   gap: 12px;
   margin-top: 20px;
 }
-.all-courses .all-courses-footer ul li a {
+.all-courses .all-courses-footer ul li button {
+  cursor: pointer;
+  border-style: none;
   text-decoration: none;
   color: var(--black-color);
   font-weight: 500;
@@ -70,16 +78,7 @@
   align-items: center;
   justify-content: center;
 }
-.all-courses .all-courses-footer ul li :active {
-  background-color: var(--black-color);
-  color: white;
-}
-.all-courses .all-courses-footer ul li :active path {
-  fill: white;
-}
-.all-courses .all-courses-footer ul li path {
-  fill: var(--black-color);
-}
+
 @media (max-width: 639px) {
   .all-courses {
     padding: 0 20px;

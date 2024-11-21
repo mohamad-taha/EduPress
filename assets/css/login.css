@@ -63,7 +63,7 @@
 .sign-in-up form > a {
   text-decoration: none;
   font-size: 18px;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 @media (max-width: 639px) {
   .sign-in-up {

@@ -37,7 +37,7 @@
   font-family: Exo;
   text-decoration: none;
   font-weight: 600;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 iframe {
   border-radius: 20px;
