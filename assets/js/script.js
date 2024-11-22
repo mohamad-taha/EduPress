@@ -741,12 +741,17 @@ if (coursesContainer || articlesContainer) {
   );
 
   const pagination = document.querySelectorAll(".pagination-btns");
+  pagination[0].style.color = "var(--primary-color)";
 
   pagination.forEach((page, id) => {
     page.setAttribute("aria-lable", `toPage${id + 1}`);
     page.dataset.page = `page${id + 1}`;
-
+    page.style.transition = "100ms";
     page.addEventListener("click", () => {
+      pagination.forEach((page) => {
+        page.style.color = "black";
+      });
+      page.style.color = "var(--primary-color)";
       page.dataset.pageDisplay = id;
       if (coursesContainer) {
         renderCards(coursesContainer, courses, pageNames[id]);
@@ -761,38 +766,43 @@ if (coursesContainer || articlesContainer) {
   const paginationleft = document.querySelector(".pagination-btn-left");
 
   const handlePagination = (pageId = 1) => {
+    const updateActivePageColor = (activePageId) => {
+      pagination.forEach((page, id) => {
+        page.style.color =
+          id === activePageId ? "var(--primary-color)" : "black";
+      });
+    };
+
+    updateActivePageColor(pageId - 1);
+
     paginationRight.addEventListener("click", () => {
-      if (pageId === totalPages) {
+      if (pageId < totalPages) {
+        pageId++;
+        console.log(pageId);
+        
         if (coursesContainer) {
           renderCards(coursesContainer, courses, `page${pageId}`);
         } else {
           renderCards(articlesContainer, articles, `page${pageId}`);
         }
-      } else {
-        if (coursesContainer) {
-          renderCards(coursesContainer, courses, `page${++pageId}`);
-        } else {
-          renderCards(articlesContainer, articles, `page${++pageId}`);
-        }
+        updateActivePageColor(pageId - 1);
+        toggleStyleView(isGridView);
       }
-      toggleStyleView(isGridView);
     });
 
     paginationleft.addEventListener("click", () => {
-      if (pageId === 1) {
+      if (pageId > 1) {
+        
+        pageId--;
+        console.log(pageId);
         if (coursesContainer) {
           renderCards(coursesContainer, courses, `page${pageId}`);
         } else {
           renderCards(articlesContainer, articles, `page${pageId}`);
         }
-      } else {
-        if (coursesContainer) {
-          renderCards(coursesContainer, courses, `page${--pageId}`);
-        } else {
-          renderCards(articlesContainer, articles, `page${--pageId}`);
-        }
+        updateActivePageColor(pageId - 1);
+        toggleStyleView(isGridView);
       }
-      toggleStyleView(isGridView);
     });
   };
 
