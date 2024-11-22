@@ -741,68 +741,59 @@ if (coursesContainer || articlesContainer) {
   );
 
   const pagination = document.querySelectorAll(".pagination-btns");
-  pagination[0].style.color = "var(--primary-color)";
-
-  pagination.forEach((page, id) => {
-    page.setAttribute("aria-lable", `toPage${id + 1}`);
-    page.dataset.page = `page${id + 1}`;
-    page.style.transition = "100ms";
-    page.addEventListener("click", () => {
-      pagination.forEach((page) => {
-        page.style.color = "black";
-      });
-      page.style.color = "var(--primary-color)";
-      page.dataset.pageDisplay = id;
-      if (coursesContainer) {
-        renderCards(coursesContainer, courses, pageNames[id]);
-      } else {
-        renderCards(articlesContainer, articles, pageNames[id]);
-      }
-      toggleStyleView(isGridView);
-    });
-  });
-
   const paginationRight = document.querySelector(".pagination-btn-right");
   const paginationleft = document.querySelector(".pagination-btn-left");
 
-  const handlePagination = (pageId = 1) => {
-    const updateActivePageColor = (activePageId) => {
+  const handlePagination = (currentPageIndex = 0) => {
+    const updateActivePageColor = (activePageIndex) => {
       pagination.forEach((page, id) => {
         page.style.color =
-          id === activePageId ? "var(--primary-color)" : "black";
+          id === activePageIndex ? "var(--primary-color)" : "black";
       });
     };
 
-    updateActivePageColor(pageId - 1);
+    updateActivePageColor(currentPageIndex);
 
     paginationRight.addEventListener("click", () => {
-      if (pageId < totalPages) {
-        pageId++;
-        console.log(pageId);
-        
+      if (currentPageIndex < totalPages - 1) {
+        currentPageIndex++;
+        const currentPageName = pageNames[currentPageIndex];
         if (coursesContainer) {
-          renderCards(coursesContainer, courses, `page${pageId}`);
+          renderCards(coursesContainer, courses, currentPageName);
         } else {
-          renderCards(articlesContainer, articles, `page${pageId}`);
+          renderCards(articlesContainer, articles, currentPageName);
         }
-        updateActivePageColor(pageId - 1);
+        updateActivePageColor(currentPageIndex);
         toggleStyleView(isGridView);
       }
     });
 
     paginationleft.addEventListener("click", () => {
-      if (pageId > 1) {
-        
-        pageId--;
-        console.log(pageId);
+      if (currentPageIndex > 0) {
+        currentPageIndex--;
+        const currentPageName = pageNames[currentPageIndex];
         if (coursesContainer) {
-          renderCards(coursesContainer, courses, `page${pageId}`);
+          renderCards(coursesContainer, courses, currentPageName);
         } else {
-          renderCards(articlesContainer, articles, `page${pageId}`);
+          renderCards(articlesContainer, articles, currentPageName);
         }
-        updateActivePageColor(pageId - 1);
+        updateActivePageColor(currentPageIndex);
         toggleStyleView(isGridView);
       }
+    });
+
+    pagination.forEach((page, id) => {
+      page.addEventListener("click", () => {
+        currentPageIndex = id;
+        const currentPageName = pageNames[currentPageIndex];
+        if (coursesContainer) {
+          renderCards(coursesContainer, courses, currentPageName);
+        } else {
+          renderCards(articlesContainer, articles, currentPageName);
+        }
+        updateActivePageColor(currentPageIndex);
+        toggleStyleView(isGridView);
+      });
     });
   };
 

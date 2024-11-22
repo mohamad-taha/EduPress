@@ -472,8 +472,6 @@ footer {
     padding: 10px;
     background-color: white;
     align-self: flex-start;
-    outline-color: var(--primary-color);
-    border: solid 2px var(--primary-color);
     border-radius: 10px;
   }
 }
