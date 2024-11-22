@@ -8,7 +8,7 @@
 }
 ::-webkit-scrollbar {
   background-color: var(--dark-gray);
-  width: 5px;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
@@ -34,10 +34,14 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: 300ms;
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -ms-transition: 300ms;
-  -o-transition: 300ms;
+}
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+body[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
 }
 .primary-btn {
   font-size: 18px;
@@ -87,7 +91,9 @@ nav .logo-container img {
   object-fit: cover;
 }
 
-nav .logo-container p {
+nav .logo-container a {
+  text-decoration: none;
+  color: var(--text-color);
   font-family: Exo;
   font-weight: 700;
   font-size: 28px;
@@ -244,7 +250,7 @@ nav .side-bar a {
   align-items: center;
   padding: 0 10px;
   box-shadow: 0px 0px 2px 1px black;
-  width: 60px;
+  width: max-content;
   height: 35px;
   border-radius: 25px;
   background-color: transparent;
@@ -306,7 +312,7 @@ nav .side-bar a {
   display: flex;
   gap: 15px;
 }
-.breadcrumbs-container p span {
+.breadcrumbs-container p span:last-child {
   color: var(--text-color);
 }
 @media (max-width: 639px) {
@@ -376,7 +382,7 @@ nav .side-bar a {
   margin-bottom: 0;
 }
 
-.card .created-by span {
+.card .created-by span:last-child {
   color: var(--dark-gray);
   margin-right: 3px;
 }
@@ -462,6 +468,14 @@ footer {
   background-color: var(--bg-color);
   height: 458px;
   justify-content: space-evenly;
+  select {
+    padding: 10px;
+    background-color: white;
+    align-self: flex-start;
+    outline-color: var(--primary-color);
+    border: solid 2px var(--primary-color);
+    border-radius: 10px;
+  }
 }
 footer .footer-content {
   display: flex;
@@ -489,7 +503,9 @@ footer .footer-content .logo-container > p {
   width: 341px;
   color: var(--dark-gray);
 }
-footer .footer-content .logo-container div p {
+footer .footer-content .logo-container div a {
+  text-decoration: none;
+  color: var(--text-color);
   font-family: Exo;
   font-weight: 700;
   font-size: 28px;
@@ -594,126 +610,5 @@ footer .about-us a:hover path {
   }
   footer .footer-content .logo-container p {
     width: 100%;
-  }
-}
-/* ======================loader================================ */
-/* From Uiverse.io by alexruix */
-.loader {
-  width: 80px;
-  height: 50px;
-  position: relative;
-}
-
-.loader-text {
-  position: absolute;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  color: #c8b6ff;
-  animation: text_713 3.5s ease both infinite;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
-
-.load {
-  background-color: #9a79ff;
-  border-radius: 50px;
-  display: block;
-  height: 16px;
-  width: 16px;
-  bottom: 0;
-  position: absolute;
-  transform: translateX(64px);
-  animation: loading_713 3.5s ease both infinite;
-}
-
-.load::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #d1c2ff;
-  border-radius: inherit;
-  animation: loading2_713 3.5s ease both infinite;
-}
-
-@keyframes text_713 {
-  0% {
-    letter-spacing: 1px;
-    transform: translateX(0px);
-  }
-
-  40% {
-    letter-spacing: 2px;
-    transform: translateX(26px);
-  }
-
-  80% {
-    letter-spacing: 1px;
-    transform: translateX(32px);
-  }
-
-  90% {
-    letter-spacing: 2px;
-    transform: translateX(0px);
-  }
-
-  100% {
-    letter-spacing: 1px;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes loading_713 {
-  0% {
-    width: 16px;
-    transform: translateX(0px);
-  }
-
-  40% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  80% {
-    width: 16px;
-    transform: translateX(64px);
-  }
-
-  90% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  100% {
-    width: 16px;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes loading2_713 {
-  0% {
-    transform: translateX(0px);
-    width: 16px;
-  }
-
-  40% {
-    transform: translateX(0%);
-    width: 80%;
-  }
-
-  80% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  90% {
-    width: 80%;
-    transform: translateX(15px);
-  }
-
-  100% {
-    transform: translateX(0px);
-    width: 16px;
   }
 }

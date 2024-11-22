@@ -20,27 +20,29 @@
       <nav>
         <div class="logo-container">
           <img src="./assets/imgs/logo.svg" alt="logo" />
-          <p>EduPress</p>
+          <a href="">EduPress</a>
         </div>
         <ul>
-          <li><a class="home" href="index.html">Home</a></li>
-          <li><a href="./courses.html">Courses</a></li>
-          <li><a class="active" href="./blog.html">Blog</a></li>
+          <li><a href="index.html" data-lang="home">Home</a></li>
+          <li><a href="./courses.html" data-lang="courses">Courses</a></li>
+          <li>
+            <a class="active" href="./blog.html" data-lang="blog">Blog</a>
+          </li>
           <li>
             <button class="nav-drop-down-btn">
               <div>
-                Page
+                <p data-lang="page">Page</p>
                 <svg
                   width="17"
                   height="16"
                   viewBox="0 0 17 16"
-                  fill="none"
+                  fill=""
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <g clip-path="url(#clip0_76_21)">
                     <path
                       d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z"
-                      fill="black"
+                      fill=""
                     />
                   </g>
                   <defs>
@@ -48,7 +50,7 @@
                       <rect
                         width="16"
                         height="16"
-                        fill="white"
+                        fill=""
                         transform="translate(0.650391)"
                       />
                     </clipPath>
@@ -57,13 +59,13 @@
               </div>
             </button>
           </li>
-          <li><a href="">Premium Theme</a></li>
+          <li><a href="" data-lang="premium_theme">Premium Theme</a></li>
         </ul>
         <div class="nav-actions">
           <button class="mode-switch" aria-label="Toggle Dark-Light Mode">
             <i class="fa-solid fa-moon mode-icon"></i>
           </button>
-          <a href="./login.html">Login / Register</a>
+          <a href="./login.html" data-lang="login">Login / Register</a>
           <button class="search-btn">
             <img src="./assets/imgs/search.svg" alt="search" />
           </button>
@@ -76,14 +78,14 @@
     <!-- ! breadcrumbs-section -->
     <div class="breadcrumbs-container">
       <p>
-        Homepage <img src="./assets/imgs/arrow-right.svg" alt="arrow-right" />
-        <span>Blog</span>
+        <span data-lang="home"> Homepage </span> >
+        <span data-lang="blog">Blog</span>
       </p>
     </div>
     <!-- ! all-articles -->
     <div class="all-articles">
       <div class="all-articles-header">
-        <h2>All articles</h2>
+        <h2 data-lang="all_articles">All articles</h2>
         <div>
           <div>
             <label for="search-input-blog"
@@ -108,6 +110,8 @@
                 /></svg
             ></label>
             <input
+              class="search-input"
+              autocomplete="off"
               placeholder="Search"
               type="text"
               name="articleName"
@@ -158,18 +162,7 @@
         <ul>
           <li>
             <button class="pagination-btn-left">
-              <svg
-                width="7"
-                height="10"
-                viewBox="0 0 7 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.84175 1.175L5.66675 0L0.666748 5L5.66675 10L6.84175 8.825L3.02508 5L6.84175 1.175Z"
-                  fill="black"
-                />
-              </svg>
+              <img src="./assets/imgs/arrow-left.svg" alt="arrow" />
             </button>
           </li>
           <li><button class="pagination-btns">1</button></li>
@@ -177,18 +170,7 @@
           <li><button class="pagination-btns">3</button></li>
           <li>
             <button class="pagination-btn-right">
-              <svg
-                width="7"
-                height="10"
-                viewBox="0 0 7 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.33333 0L0.158325 1.175L3.97499 5L0.158325 8.825L1.33333 10L6.33332 5L1.33333 0Z"
-                  fill="black"
-                />
-              </svg>
+              <img src="./assets/imgs/arrowRight.svg" alt="arrow" />
             </button>
           </li>
         </ul>
@@ -200,31 +182,35 @@
         <div class="logo-container">
           <div>
             <img src="./assets/imgs/logo.svg" alt="logo" />
-            <p>EduPress</p>
+            <a href="">EduPress</a>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          <select name="Languages" id="lang-selector">
+            <option selected value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
         </div>
         <div class="contact">
-          <p>GET HELP</p>
-          <a href="./contact.html">Contact Us </a>
-          <a href="">Latest Articles</a>
-          <a href="./faq.html">FAQ</a>
+          <p data-lang="help">GET HELP</p>
+          <a href="./contact.html" data-lang="contact">Contact Us </a>
+          <a href="" data-lang="latest_articles">Latest Articles</a>
+          <a href="./faq.html" data-lang="faq">FAQ</a>
         </div>
         <div class="footer-programs">
-          <p>PROGRAMS</p>
+          <p data-lang="programs">PROGRAMS</p>
           <div>
-            <a href="">Art & Design</a>
-            <a href="">Business</a>
-            <a href="">IT & Software</a>
-            <a href="">Languages</a>
-            <a href="">Programming</a>
+            <a href="" data-lang="Art_Design">Art & Design</a>
+            <a href="" data-lang="Business">Business</a>
+            <a href="" data-lang="software">IT & Software</a>
+            <a href="" data-lang="languages">Languages</a>
+            <a href="" data-lang="programming">Programming</a>
           </div>
         </div>
         <div class="about-us">
-          <p>CONTACT US</p>
+          <p data-lang="contact">CONTACT US</p>
           <div>
             <p class="address">
               Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA
@@ -316,5 +302,6 @@
       <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
     <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/locales.js" defer></script>
   </body>
 </html>

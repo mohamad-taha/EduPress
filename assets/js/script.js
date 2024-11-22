@@ -1,4 +1,5 @@
 /* ___________________________navbar________________________ */
+
 const navBar = document.querySelector("nav");
 
 window.onscroll = () => {
@@ -23,11 +24,9 @@ modeSwitch.addEventListener("click", () => {
   modeSwitchIcon.className = darkMode
     ? "fa-solid fa-sun mode-icon"
     : "fa-solid fa-moon mode-icon";
-  modeSwitchIcon.style.transform = darkMode
-    ? "translateX(100%)rotate(180deg)"
-    : "";
+  modeSwitchIcon.style.transform = darkMode ? "rotate(180deg)" : "";
   const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  const newTheme = currentTheme === "dark" ? "" : "dark";
   body.setAttribute("data-theme", newTheme);
 });
 
@@ -56,8 +55,8 @@ navDropDown.forEach((btn) => {
   btn.appendChild(dropDownContainer);
   dropDownContainer.classList.add("drop-down");
   dropDownContainer.style.transform = "scale(0)";
-  dropDownContainer.innerHTML = `<a href='./contact.html'>contact</a>
-  <a href='./faq.html'>faq</a>`;
+  dropDownContainer.innerHTML = `<a href='./contact.html' data-lang='contact'>contact</a>
+  <a href='./faq.html' data-lang='faq'>faq</a>`;
 
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -139,6 +138,9 @@ const articles = {
       date: "2022",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img2.svg",
@@ -146,6 +148,9 @@ const articles = {
       date: "2022",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img3.svg",
@@ -153,6 +158,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img4.svg",
@@ -160,6 +168,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img5.svg",
@@ -167,6 +178,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -174,6 +188,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
   ],
   page2: [
@@ -183,6 +200,9 @@ const articles = {
       date: "2020",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img2.svg",
@@ -190,6 +210,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img3.svg",
@@ -197,6 +220,9 @@ const articles = {
       date: "2055",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
 
     {
@@ -205,6 +231,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img5.svg",
@@ -212,6 +241,9 @@ const articles = {
       date: "2021",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -219,6 +251,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
   ],
   page3: [
@@ -228,6 +263,9 @@ const articles = {
       date: "2123",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img2.svg",
@@ -235,6 +273,9 @@ const articles = {
       date: "2013",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img3.svg",
@@ -242,6 +283,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
 
     {
@@ -250,6 +294,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/articles-card-img5.svg",
@@ -257,6 +304,9 @@ const articles = {
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -264,6 +314,9 @@ const articles = {
       date: "2033",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
                 Theme?...`,
+      dataLangTitle: "best_learnpress_wordPress_theme_collection_for_2023",
+      dataLangContent:
+        "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
   ],
 };
@@ -276,6 +329,14 @@ const courses = {
       time: "3Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-2.svg",
@@ -284,6 +345,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-3.svg",
@@ -292,6 +361,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -300,6 +377,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-5.svg",
@@ -308,6 +393,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-6.svg",
@@ -316,6 +409,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
   ],
   page2: [
@@ -326,6 +427,14 @@ const courses = {
       time: "21Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-3.svg",
@@ -334,6 +443,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-5.svg",
@@ -342,6 +459,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -350,6 +475,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-1.svg",
@@ -358,6 +491,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-6.svg",
@@ -366,6 +507,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
   ],
   page3: [
@@ -376,6 +525,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-5.svg",
@@ -384,6 +541,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-6.svg",
@@ -392,6 +557,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/card-img6.svg",
@@ -400,6 +573,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-5.svg",
@@ -408,6 +589,14 @@ const courses = {
       time: "2Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
     {
       img: "/assets/imgs/featured-course-card-6.svg",
@@ -416,6 +605,14 @@ const courses = {
       time: "5Weeks",
       graduated: "156 Students",
       price: "$29.0",
+      dataLangTitle: "Create_an_MS_Website_with_LearnPress",
+      dataLangDeterminedPoitras: "Determined_Poitras",
+      dataLangBy: "by",
+      dataLangPhotography: "photography",
+      dataLangGraduated: "students_156",
+      dataLangTime: "weeks_2",
+      dataLangFree: "free",
+      dataLangViewMore: "view_more",
     },
   ],
 };
@@ -439,24 +636,24 @@ if (coursesContainer || articlesContainer) {
         const cardsHtml = filteredCards
           .map((card) => {
             return `
-      <div class="card">
-        <img src="${card.img}" alt="card-img" />
-        <p>Photography</p>
-        <div>
-          <div>
-            <p class="created-by"><span>by</span>${card.createdBy}</p>
-            <p class="card-title">${card.title}</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />${card.time}</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />${card.graduated}</p>
-          </div>
-          <div class="card-footer">
-            <p><del>${card.price}</del> Free</p>
-            <a href="">View More</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+              <img src="${card.img}" alt="card-img" />
+              <p data-lang=${card.dataLangPhotography}>Photography</p>
+              <div>
+                <div>
+                  <p class="created-by"> <span data-lang=${card.dataLangBy}>by</span> <span data-lang=${card.dataLangDeterminedPoitras}>${card.createdBy}</span> </p>
+                  <p class="card-title" data-lang=${card.dataLangTitle}>${card.title}</p>
+                </div>
+                <div class="card-info">
+                  <p><img src="./assets/imgs/time.svg" alt="time" /> <span data-lang=${card.dataLangTime}>${card.time}</span> </p>
+                  <p><img src="./assets/imgs/hat.svg" alt="hat" /> <span data-lang=${card.dataLangGraduated}>${card.graduated}</span> </p>
+                </div>
+                <div class="card-footer">
+                  <p><del>${card.price}</del> <span data-lang=${card.dataLangFree}>Free</span></p>
+                  <a href="" data-lang=${card.dataLangViewMore}>View More</a>
+                </div>
+              </div>
+            </div>
     `;
           })
           .join("");
@@ -468,25 +665,24 @@ if (coursesContainer || articlesContainer) {
         const filteredCards = cardsList.filter((card) =>
           card.date.toLowerCase().includes(searchValue)
         );
-        console.log(filteredCards);
 
         const cardsHtml = filteredCards
           .map((card) => {
             return `
-      <div class="card">
-        <img src="${card.img}" alt="card-img" />
-        <div>
-          <div>
-            <p class="card-title">${card.title}</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/calender.svg" alt="calender" />Jan 24, ${card.date}</p>
-          </div>
-          <div class="card-content">
-            <p>${card.content}</p>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+              <img src="${card.img}" alt="card-img" />
+              <div>
+                <div>
+                  <p class="card-title" data-lang=${card.dataLangTitle}>${card.title}</p>
+                </div>
+                <div class="card-info">
+                  <p><img src="./assets/imgs/calender.svg" alt="calender" /> <span>Jan 24, ${card.date}</span> </p>
+                </div>
+                <div class="card-content">
+                  <p data-lang=${card.dataLangContent}>${card.content}</p>
+                </div>
+              </div>
+            </div>
     `;
           })
           .join("");
@@ -500,19 +696,19 @@ if (coursesContainer || articlesContainer) {
           return `
             <div class="card">
               <img src="${card.img}" alt="card-img" />
-              <p>Photography</p>
+              <p data-lang=${card.dataLangPhotography}>Photography</p>
               <div>
                 <div>
-                  <p class="created-by"><span>by</span>${card.createdBy}</p>
-                  <p class="card-title">${card.title}</p>
+                  <p class="created-by"> <span data-lang=${card.dataLangBy}>by</span> <span data-lang=${card.dataLangDeterminedPoitras}>${card.createdBy}</span> </p>
+                  <p class="card-title" data-lang=${card.dataLangTitle}>${card.title}</p>
                 </div>
                 <div class="card-info">
-                  <p><img src="./assets/imgs/time.svg" alt="time" />${card.time}</p>
-                  <p><img src="./assets/imgs/hat.svg" alt="hat" />${card.graduated}</p>
+                  <p><img src="./assets/imgs/time.svg" alt="time" /> <span data-lang=${card.dataLangTime}>${card.time}</span> </p>
+                  <p><img src="./assets/imgs/hat.svg" alt="hat" /> <span data-lang=${card.dataLangGraduated}>${card.graduated}</span> </p>
                 </div>
                 <div class="card-footer">
-                  <p><del>${card.price}</del> Free</p>
-                  <a href="">View More</a>
+                  <p><del>${card.price}</del> <span data-lang=${card.dataLangFree}>Free</span></p>
+                  <a href="" data-lang=${card.dataLangViewMore}>View More</a>
                 </div>
               </div>
             </div>
@@ -523,13 +719,13 @@ if (coursesContainer || articlesContainer) {
               <img src="${card.img}" alt="card-img" />
               <div>
                 <div>
-                  <p class="card-title">${card.title}</p>
+                  <p class="card-title" data-lang=${card.dataLangTitle}>${card.title}</p>
                 </div>
                 <div class="card-info">
-                  <p><img src="./assets/imgs/calender.svg" alt="calender" />Jan 24, ${card.date}</p>
+                  <p><img src="./assets/imgs/calender.svg" alt="calender" /> <span>Jan 24, ${card.date}</span> </p>
                 </div>
                 <div class="card-content">
-                  <p>${card.content}</p>
+                  <p data-lang=${card.dataLangContent}>${card.content}</p>
                 </div>
               </div>
             </div>
@@ -662,13 +858,15 @@ const toggleStyleView = (isGrid) => {
     });
   }
 };
-
-listBtnStyle.addEventListener("click", () => {
-  toggleStyleView(false);
-  isGridView = false;
-});
-
-gridBtnStyle.addEventListener("click", () => {
-  toggleStyleView(true);
-  isGridView = true;
-});
+if (gridBtnStyle) {
+  gridBtnStyle.addEventListener("click", () => {
+    toggleStyleView(true);
+    isGridView = true;
+  });
+}
+if (listBtnStyle) {
+  listBtnStyle.addEventListener("click", () => {
+    toggleStyleView(false);
+    isGridView = false;
+  });
+}

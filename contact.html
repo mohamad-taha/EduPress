@@ -20,27 +20,27 @@
       <nav>
         <div class="logo-container">
           <img src="./assets/imgs/logo.svg" alt="logo" />
-          <p>EduPress</p>
+          <a href="">EduPress</a>
         </div>
         <ul>
-          <li><a class="home" href="index.html">Home</a></li>
-          <li><a href="./courses.html">Courses</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html" data-lang="home">Home</a></li>
+          <li><a href="./courses.html" data-lang="courses">Courses</a></li>
+          <li><a href="./blog.html" data-lang="blog">Blog</a></li>
           <li>
             <button class="nav-drop-down-btn">
               <div>
-                Page
+                <p data-lang="page">Page</p>
                 <svg
                   width="17"
                   height="16"
                   viewBox="0 0 17 16"
-                  fill="none"
+                  fill=""
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <g clip-path="url(#clip0_76_21)">
                     <path
                       d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z"
-                      fill="black"
+                      fill=""
                     />
                   </g>
                   <defs>
@@ -48,7 +48,7 @@
                       <rect
                         width="16"
                         height="16"
-                        fill="white"
+                        fill=""
                         transform="translate(0.650391)"
                       />
                     </clipPath>
@@ -57,13 +57,13 @@
               </div>
             </button>
           </li>
-          <li><a href="">Premium Theme</a></li>
+          <li><a href="" data-lang="premium_theme">Premium Theme</a></li>
         </ul>
         <div class="nav-actions">
           <button class="mode-switch" aria-label="Toggle Dark-Light Mode">
             <i class="fa-solid fa-moon mode-icon"></i>
           </button>
-          <a href="./login.html">Login / Register</a>
+          <a href="./login.html" data-lang="login">Login / Register</a>
           <button class="search-btn">
             <img src="./assets/imgs/search.svg" alt="search" />
           </button>
@@ -76,14 +76,14 @@
     <!-- ! breadcrumbs-section -->
     <div class="breadcrumbs-container">
       <p>
-        Homepage <img src="./assets/imgs/arrow-right.svg" alt="arrow-right" />
-        <span>Contact</span>
+        <span data-lang="home"> Homepage </span> >
+        <span data-lang="contact">Contact</span>
       </p>
     </div>
     <!-- ! contact-info-section -->
     <div class="contact-container">
       <div class="contact-info">
-        <h2>Need a direct line?</h2>
+        <h2 data-lang="need_line">Need a direct line?</h2>
         <p>
           Cras massa et odio donec faucibus in. Vitae pretium massa dolor
           ullamcorper lectus elit quam.
@@ -93,7 +93,7 @@
             <img src="./assets/imgs/call.svg" alt="call" />
           </div>
           <div>
-            <p>Phone</p>
+            <p data-lang="phone">Phone</p>
             <a href="">(123) 456 7890</a>
           </div>
         </div>
@@ -102,7 +102,7 @@
             <img src="./assets/imgs/mail.svg" alt="mail" />
           </div>
           <div>
-            <p>Email</p>
+            <p data-lang="email">Email</p>
             <a href="">contact@thimpress.com</a>
           </div>
         </div>
@@ -115,8 +115,10 @@
     </div>
     <!-- ! create-comment-section -->
     <div class="create-comment">
-      <h2>Contact us</h2>
-      <p>
+      <h2 data-lang="contact">Contact us</h2>
+      <p
+        data-lang="your_email_address_will_not_be_published_Required_fields_are_marked"
+      >
         Your email address will not be published. Required fields are marked *
       </p>
       <div class="comment-form">
@@ -135,19 +137,22 @@
             required
             placeholder="Email*"
           />
-          <textarea
+          <textarea 
+            class="contact-input"
             required
             name="comment"
             id=""
-            placeholder="Comment"
+            placeholder="Comment*"
           ></textarea>
           <div>
             <input type="checkbox" id="save-my-info" />
-            <label for="save-my-info"
+            <label for="save-my-info" data-lang="save_info"
               >Save my name, email in this brower for the next time I comment
             </label>
           </div>
-          <button class="primary-btn" type="submit">Posts comment</button>
+          <button class="primary-btn" type="submit" data-lang="Post_comment">
+            Post comment
+          </button>
         </form>
       </div>
     </div>
@@ -157,31 +162,35 @@
         <div class="logo-container">
           <div>
             <img src="./assets/imgs/logo.svg" alt="logo" />
-            <p>EduPress</p>
+            <a href="">EduPress</a>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          <select name="Languages" id="lang-selector">
+            <option selected value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
         </div>
         <div class="contact">
-          <p>GET HELP</p>
-          <a href="./contact.html">Contact Us </a>
-          <a href="">Latest Articles</a>
-          <a href="./faq.html">FAQ</a>
+          <p data-lang="help">GET HELP</p>
+          <a href="./contact.html" data-lang="contact">Contact Us </a>
+          <a href="" data-lang="latest_articles">Latest Articles</a>
+          <a href="./faq.html" data-lang="faq">FAQ</a>
         </div>
         <div class="footer-programs">
-          <p>PROGRAMS</p>
+          <p data-lang="programs">PROGRAMS</p>
           <div>
-            <a href="">Art & Design</a>
-            <a href="">Business</a>
-            <a href="">IT & Software</a>
-            <a href="">Languages</a>
-            <a href="">Programming</a>
+            <a href="" data-lang="Art_Design">Art & Design</a>
+            <a href="" data-lang="Business">Business</a>
+            <a href="" data-lang="software">IT & Software</a>
+            <a href="" data-lang="languages">Languages</a>
+            <a href="" data-lang="programming">Programming</a>
           </div>
         </div>
         <div class="about-us">
-          <p>CONTACT US</p>
+          <p data-lang="contact">CONTACT US</p>
           <div>
             <p class="address">
               Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA
@@ -273,5 +282,6 @@
       <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
     <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/locales.js" defer></script>
   </body>
 </html>

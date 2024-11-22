@@ -20,16 +20,16 @@
       <nav>
         <div class="logo-container">
           <img src="./assets/imgs/logo.svg" alt="logo" />
-          <p>EduPress</p>
+          <a href="">EduPress</a>
         </div>
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="./courses.html">Courses</a></li>
-          <li><a href="./blog.html">Blog</a></li>
+          <li><a class="active" href="index.html" data-lang="home">Home</a></li>
+          <li><a href="./courses.html" data-lang="courses">Courses</a></li>
+          <li><a href="./blog.html" data-lang="blog">Blog</a></li>
           <li>
             <button class="nav-drop-down-btn">
               <div>
-                Page
+                <p data-lang="page">Page</p>
                 <svg
                   width="17"
                   height="16"
@@ -57,13 +57,13 @@
               </div>
             </button>
           </li>
-          <li><a href="">Premium Theme</a></li>
+          <li><a href="" data-lang="premium_theme">Premium Theme</a></li>
         </ul>
         <div class="nav-actions">
           <button class="mode-switch" aria-label="Toggle Dark-Light Mode">
             <i class="fa-solid fa-moon mode-icon"></i>
           </button>
-          <a href="./login.html">Login / Register</a>
+          <a href="./login.html" data-lang="login">Login / Register</a>
           <button class="search-btn">
             <img src="./assets/imgs/search.svg" alt="search" />
           </button>
@@ -76,123 +76,194 @@
     <!-- ! hero-section -->
     <div class="hero">
       <div class="hero-content">
-        <h1>Build Skills with Online Course</h1>
-        <p>
+        <h1 data-lang="Build_Skills_with_Online_Course">
+          Build Skills with Online Course
+        </h1>
+        <p
+          data-lang="We_denounce_with_righteous_indignation_and_dislike_men_who_are_so_beguiled_and_demoralized_that_cannot_trouble"
+        >
           We denounce with righteous indignation and dislike men who are so
           beguiled and demoralized that cannot trouble.
         </p>
-        <button class="primary-btn">Posts comment</button>
+        <button class="primary-btn" data-lang="Post_comment">
+          Post comment
+        </button>
       </div>
     </div>
     <!-- ! top-categories-section -->
     <div class="top-categories">
       <div class="categories-header">
         <div>
-          <h2>Top Categories</h2>
-          <p>Explore our Popular Categories</p>
+          <h2 data-lang="Top_Categories">Top Categories</h2>
+          <p data-lang="Explore_our_Popular_Categories">
+            Explore our Popular Categories
+          </p>
         </div>
-        <button>All categories</button>
+        <button data-lang="all_categories">All categories</button>
       </div>
       <div class="top-categories-cards">
         <div class="top-categories-card">
           <img src="./assets/imgs/art.svg" alt="Art" />
-          <p class="top-categories-card-title">Art & Design</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="Art_Design">
+            Art & Design
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/development.svg" alt="Development" />
-          <p class="top-categories-card-title">Development</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="development">
+            Development
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
-          <img src="./assets/imgs/Communiication.svg" alt="Communiication" />
-          <p class="top-categories-card-title">Communiication</p>
-          <p>38 Courses</p>
+          <img src="./assets/imgs/Communiication.svg" alt="Communication" />
+          <p class="top-categories-card-title" data-lang="communication">
+            Communication
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/Videography.svg" alt="Videography" />
-          <p class="top-categories-card-title">Videography</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="Videography">
+            Videography
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/Marketing.svg" alt="Marketing" />
-          <p class="top-categories-card-title">Marketing</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="marketing">
+            Marketing
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/Content-writing.svg" alt="Content writing" />
-          <p class="top-categories-card-title">Content writing</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="content_writing">
+            Content writing
+          </p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/Finance.svg" alt="Finance" />
-          <p class="top-categories-card-title">Finance</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="finance">Finance</p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
         <div class="top-categories-card">
           <img src="./assets/imgs/Science.svg" alt="Science" />
-          <p class="top-categories-card-title">Science</p>
-          <p>38 Courses</p>
+          <p class="top-categories-card-title" data-lang="science">Science</p>
+          <p data-lang="course_38">38 Courses</p>
         </div>
       </div>
-      <button>All categories</button>
+      <button data-lang="all_categories">All categories</button>
     </div>
     <!-- ! feaured-courses-section -->
     <div class="featured-courses">
       <div class="courses-header">
         <div>
-          <h2>Featured courses</h2>
-          <p>Explore our Popular Courses</p>
+          <h2 data-lang="featured_courses">Featured courses</h2>
+          <p data-lang="Explore_our_Popular_Categories">
+            Explore our Popular Courses
+          </p>
         </div>
-        <button>All Courses</button>
+        <button data-lang="all_courses">All Courses</button>
       </div>
-      <div class="featured-courses-cards">
-        <div class="featured-courses-card">
-          <img src="./assets/imgs/featured-course-card-1.svg" alt="card-img" />
-          <p>Photography</p>
-          <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
-          </div>
-        </div>
-        <div class="featured-courses-card">
+      <div class="cards-container">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-2.svg" alt="card-img" />
-          <p>Photography</p>
+          <p data-lang="photography">Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
-          </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+            <div>
+              <p class="created-by">
+                <span data-lang="by">by</span>
+                <span data-lang="Determined_Poitras"> Determined-Poitras </span>
+              </p>
+              <p
+                class="card-title"
+                data-lang="Create_an_MS_Website_with_LearnPress"
+              >
+                Create an LMS Website with LearnPress
+              </p>
+            </div>
+            <div class="card-info">
+              <p>
+                <img src="./assets/imgs/time.svg" alt="time" />
+                <span data-lang="weeks_2">2 Weeks</span>
+              </p>
+              <p>
+                <img src="./assets/imgs/hat.svg" alt="hat" />
+                <span data-lang="students_156">156 Students</span>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> <span data-lang="free">Free</span></p>
+              <a href="" data-lang="view_more">View More</a>
+            </div>
           </div>
         </div>
-        <div class="featured-courses-card">
+        <div class="card">
           <img src="./assets/imgs/featured-course-card-3.svg" alt="card-img" />
-          <p>Photography</p>
+          <p data-lang="photography">Photography</p>
           <div>
-            <p class="created-by"><span>by</span>Determined-Poitras</p>
-            <p class="card-title">Create an LMS Website with LearnPress</p>
+            <div>
+              <p class="created-by">
+                <span data-lang="by">by</span>
+                <span data-lang="Determined_Poitras"> Determined-Poitras </span>
+              </p>
+              <p
+                class="card-title"
+                data-lang="Create_an_MS_Website_with_LearnPress"
+              >
+                Create an LMS Website with LearnPress
+              </p>
+            </div>
+            <div class="card-info">
+              <p>
+                <img src="./assets/imgs/time.svg" alt="time" />
+                <span data-lang="weeks_2">2 Weeks</span>
+              </p>
+              <p>
+                <img src="./assets/imgs/hat.svg" alt="hat" />
+                <span data-lang="students_156">156 Students</span>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> <span data-lang="free">Free</span></p>
+              <a href="" data-lang="view_more">View More</a>
+            </div>
           </div>
-          <div class="card-info">
-            <p><img src="./assets/imgs/time.svg" alt="time" />2Weeks</p>
-            <p><img src="./assets/imgs/hat.svg" alt="hat" />156 Students</p>
-          </div>
-          <div class="card-footer">
-            <p><del>$29.0</del> Free</p>
-            <a href="">View More</a>
+        </div>
+
+        <div class="card">
+          <img src="./assets/imgs/featured-course-card-1.svg" alt="card-img" />
+          <p data-lang="photography">Photography</p>
+          <div>
+            <div>
+              <p class="created-by">
+                <span data-lang="by">by</span>
+                <span data-lang="Determined_Poitras"> Determined-Poitras </span>
+              </p>
+              <p
+                class="card-title"
+                data-lang="Create_an_MS_Website_with_LearnPress"
+              >
+                Create an LMS Website with LearnPress
+              </p>
+            </div>
+            <div class="card-info">
+              <p>
+                <img src="./assets/imgs/time.svg" alt="time" />
+                <span data-lang="weeks_2">2 Weeks</span>
+              </p>
+              <p>
+                <img src="./assets/imgs/hat.svg" alt="hat" />
+                <span data-lang="students_156">156 Students</span>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p><del>$29.0</del> <span data-lang="free">Free</span></p>
+              <a href="" data-lang="view_more">View More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -200,49 +271,69 @@
     </div>
     <!-- ! explore-courses-section -->
     <div class="explore-courses">
-      <p class="desc">GET MORE POWER FROM</p>
-      <h2>LearnPress Add-Ons</h2>
-      <p>
+      <p class="desc" data-lang="GET_MORE_POWER_FROM">GET MORE POWER FROM</p>
+      <h2 data-lang="learnpress_addons">LearnPress Add-Ons</h2>
+      <p
+        data-lang="The_next_level_of_LearnPress_LMS_WordPress_Plugin_More_Powerful_Flexible_and_Magical_Inside"
+      >
         The next level of LearnPress - LMS WordPress Plugin. More Powerful,
         Flexible and Magical Inside.
       </p>
-      <button class="primary-btn">Explorer course</button>
+      <button class="primary-btn" data-lang="explore_course">
+        Explorer course
+      </button>
     </div>
     <!-- ! stat-online-section -->
     <div class="stat-online">
       <div>
         <span>25K+</span>
-        <p>Active Students</p>
+        <p data-lang="active_students">Active Students</p>
       </div>
       <div>
         <span>899</span>
-        <p>Total Courses</p>
+        <p data-lang="total_courses">Total Courses</p>
       </div>
       <div>
         <span>158</span>
-        <p>Instructor</p>
+        <p data-lang="instructor">Instructor</p>
       </div>
       <div>
         <span>100%</span>
-        <p>Satisfaction rate</p>
+        <p data-lang="satisfaction_rate">Satisfaction rate</p>
       </div>
     </div>
     <!-- ! skills-section -->
     <div class="skills-container">
       <img src="./assets/imgs/Vector.svg" alt="vector" />
       <div>
-        <h2>Grow us your skill with LearnPress LMS</h2>
-        <p>
+        <h2 data-lang="Grow_us_your_skill_with_LearnPress_LMS">
+          Grow us your skill with LearnPress LMS
+        </h2>
+        <p
+          data-lang="We_enounce_with_righteous_indignation_and_dislike_men_who_are_so_beguiled_and_demoralized_that_cannot_trouble"
+        >
           We denounce with righteous indignation and dislike men who are so
           beguiled and demoralized that cannot trouble.
         </p>
         <ul>
-          <li><img src="./assets/imgs/true.svg" alt="check" />Certification</li>
-          <li><img src="./assets/imgs/true.svg" alt="check" />Certification</li>
-          <li><img src="./assets/imgs/true.svg" alt="check" />Certification</li>
-          <li><img src="./assets/imgs/true.svg" alt="check" />Certification</li>
+          <li>
+            <img src="./assets/imgs/true.svg" alt="check" />
+            <p data-lang="Certification">Certification</p>
+          </li>
+          <li>
+            <img src="./assets/imgs/true.svg" alt="check" />
+            <p data-lang="Certification">Certification</p>
+          </li>
+          <li>
+            <img src="./assets/imgs/true.svg" alt="check" />
+            <p data-lang="Certification">Certification</p>
+          </li>
+          <li>
+            <img src="./assets/imgs/true.svg" alt="check" />
+            <p data-lang="Certification">Certification</p>
+          </li>
         </ul>
-        <button class="primary-btn">Explore Now</button>
+        <button class="primary-btn" data-lang="explore_now">Explore Now</button>
       </div>
     </div>
     <!-- ! join-us-section -->
@@ -250,11 +341,15 @@
       <img src="./assets/imgs/banner.svg " alt="background" />
       <div>
         <img src="./assets/imgs/001-student 1.svg" alt="student" />
-        <p>Let's Start With Academy LMS</p>
+        <p data-lang="Start_With_Academy_LMS">Let's Start With Academy LMS</p>
       </div>
       <div>
-        <button class="outline-primary-btn">I'm a student</button>
-        <button class="primary-btn">Become an Instructor</button>
+        <button class="outline-primary-btn" data-lang="am_student">
+          I'm a student
+        </button>
+        <button class="primary-btn" data-lang="become_instructor">
+          Become an Instructor
+        </button>
       </div>
     </div>
     <!-- ! footer-section -->
@@ -263,31 +358,35 @@
         <div class="logo-container">
           <div>
             <img src="./assets/imgs/logo.svg" alt="logo" />
-            <p>EduPress</p>
+            <a href="">EduPress</a>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          <select name="Languages" id="lang-selector">
+            <option selected value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
         </div>
         <div class="contact">
-          <p>GET HELP</p>
-          <a href="./contact.html">Contact Us </a>
-          <a href="">Latest Articles</a>
-          <a href="./faq.html">FAQ</a>
+          <p data-lang="help">GET HELP</p>
+          <a href="./contact.html" data-lang="contact">Contact Us </a>
+          <a href="" data-lang="latest_articles">Latest Articles</a>
+          <a href="./faq.html" data-lang="faq">FAQ</a>
         </div>
         <div class="footer-programs">
-          <p>PROGRAMS</p>
+          <p data-lang="programs">PROGRAMS</p>
           <div>
-            <a href="">Art & Design</a>
-            <a href="">Business</a>
-            <a href="">IT & Software</a>
-            <a href="">Languages</a>
-            <a href="">Programming</a>
+            <a href="" data-lang="Art_Design">Art & Design</a>
+            <a href="" data-lang="Business">Business</a>
+            <a href="" data-lang="software">IT & Software</a>
+            <a href="" data-lang="languages">Languages</a>
+            <a href="" data-lang="programming">Programming</a>
           </div>
         </div>
         <div class="about-us">
-          <p>CONTACT US</p>
+          <p data-lang="contact">CONTACT US</p>
           <div>
             <p class="address">
               Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA
@@ -378,6 +477,7 @@
       </div>
       <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
+    <script src="./assets/js/locales.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
   </body>
 </html>

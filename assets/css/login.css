@@ -45,11 +45,12 @@
   flex-direction: column;
 }
 .sign-in-up .password-container button {
+  cursor: pointer;
   position: absolute;
   background-color: transparent;
   border: none;
   left: 93%;
-  top: 20%;
+  top: 25%;
 }
 .sign-in-up .remember-me {
   display: flex;
