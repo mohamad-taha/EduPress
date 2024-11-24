@@ -217,6 +217,12 @@ langChange.forEach((select) => {
       if (courseInputIcn) {
         courseInputIcn.style = "right:90%";
       }
+
+      const sideBarInput = document.querySelector(".side-bar input");
+      sideBarInput.placeholder = "البحث";
+
+      const sideBarInputIcn = document.querySelector("[for='search']");
+      sideBarInputIcn.style = "right:85%";
     } else if (language === "en") {
       body.dir = "ltr";
       document.documentElement.lang = "en";
@@ -262,6 +268,10 @@ langChange.forEach((select) => {
       if (courseInputIcn) {
         courseInputIcn.style = "left:90%";
       }
+      const sideBarInput = document.querySelector(".side-bar input");
+      sideBarInput.placeholder = "Search";
+      const sideBarInputIcn = document.querySelector("[for='search']");
+      sideBarInputIcn.style = "left:'85%'";
     }
   });
 });

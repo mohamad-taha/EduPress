@@ -37,12 +37,14 @@ sideBarContainer.innerHTML = `
         <img src='./assets/imgs/logo.svg' alt='logo'/>
         </div>
         <div class='side-bar-body'>
-        <a href="index.html" >Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
+        <a data-lang='home' href="index.html" >Home</a>
+        <a data-lang='courses' href="courses.html">Courses</a>
+        <a data-lang='blog' href="blog.html">Blog</a>
         <button class=nav-drop-down-btn>
         <div>
+        <span data-lang='page'>
         Page
+        </span>
         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_76_21)">
             <path d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z" fill="black"/>
@@ -55,11 +57,11 @@ sideBarContainer.innerHTML = `
         </svg>
         </div>
         </button>
-        <a href="#">Premium Theme</a>
+        <a href="#" data-lang='premium_theme'>Premium Theme</a>
         </div>
         <div class='side-bar-footer'>
         <div>
-            <label for="search-input-course"
+            <label for="search"
               ><svg
                 width="20"
                 height="20"
@@ -81,15 +83,15 @@ sideBarContainer.innerHTML = `
                 /></svg
             ></label>
             <input
-              class="search-input"
+              
               autocomplete="off"
               placeholder="Search"
               type="text"
-              name="courseName"
-              id="search-input-course"
+              name="search"
+              id="search"
             />
           </div>
-        <a class='primary-btn' href="./login.html">Login</a>
+        <a class='primary-btn' href="./login.html" data-lang='login'>Login</a>
         
         </div>
         `;
@@ -189,7 +191,7 @@ faqBtn.forEach((btn, id) => {
 const articles = {
   page1: [
     {
-      img: "/assets/imgs/articles-card-img1.svg",
+      img: "./assets/imgs/articles-card-img1.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2022",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -199,7 +201,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img2.svg",
+      img: "./assets/imgs/articles-card-img2.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2022",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -209,7 +211,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img3.svg",
+      img: "./assets/imgs/articles-card-img3.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -219,7 +221,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img4.svg",
+      img: "./assets/imgs/articles-card-img4.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -229,7 +231,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img5.svg",
+      img: "./assets/imgs/articles-card-img5.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -239,7 +241,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -251,7 +253,7 @@ const articles = {
   ],
   page2: [
     {
-      img: "/assets/imgs/articles-card-img2.svg",
+      img: "./assets/imgs/articles-card-img2.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2020",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -261,7 +263,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img2.svg",
+      img: "./assets/imgs/articles-card-img2.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -271,7 +273,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img3.svg",
+      img: "./assets/imgs/articles-card-img3.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2055",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -282,7 +284,7 @@ const articles = {
     },
 
     {
-      img: "/assets/imgs/articles-card-img4.svg",
+      img: "./assets/imgs/articles-card-img4.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -292,7 +294,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img5.svg",
+      img: "./assets/imgs/articles-card-img5.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2021",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -302,7 +304,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -314,7 +316,7 @@ const articles = {
   ],
   page3: [
     {
-      img: "/assets/imgs/articles-card-img3.svg",
+      img: "./assets/imgs/articles-card-img3.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2123",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -324,7 +326,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img2.svg",
+      img: "./assets/imgs/articles-card-img2.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2013",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -334,7 +336,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img3.svg",
+      img: "./assets/imgs/articles-card-img3.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -345,7 +347,7 @@ const articles = {
     },
 
     {
-      img: "/assets/imgs/articles-card-img4.svg",
+      img: "./assets/imgs/articles-card-img4.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -355,7 +357,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/articles-card-img5.svg",
+      img: "./assets/imgs/articles-card-img5.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2023",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -365,7 +367,7 @@ const articles = {
         "looking_for_an_amazing_well_functional_learnpress_wordpress_theme",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Best LearnPress WordPress Theme Collection for 2023",
       date: "2033",
       content: ` Looking for an amazing & well-functional LearnPress WordPress
@@ -379,7 +381,7 @@ const articles = {
 const courses = {
   page1: [
     {
-      img: "/assets/imgs/featured-course-card-1.svg",
+      img: "./assets/imgs/featured-course-card-1.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "3Weeks",
@@ -395,7 +397,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-2.svg",
+      img: "./assets/imgs/featured-course-card-2.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -411,7 +413,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-3.svg",
+      img: "./assets/imgs/featured-course-card-3.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -427,7 +429,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -443,7 +445,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-5.svg",
+      img: "./assets/imgs/featured-course-card-5.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -459,7 +461,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-6.svg",
+      img: "./assets/imgs/featured-course-card-6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -477,7 +479,7 @@ const courses = {
   ],
   page2: [
     {
-      img: "/assets/imgs/featured-course-card-2.svg",
+      img: "./assets/imgs/featured-course-card-2.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "21Weeks",
@@ -493,7 +495,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-3.svg",
+      img: "./assets/imgs/featured-course-card-3.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -509,7 +511,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-5.svg",
+      img: "./assets/imgs/featured-course-card-5.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -525,7 +527,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -541,7 +543,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-1.svg",
+      img: "./assets/imgs/featured-course-card-1.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -557,7 +559,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-6.svg",
+      img: "./assets/imgs/featured-course-card-6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -575,7 +577,7 @@ const courses = {
   ],
   page3: [
     {
-      img: "/assets/imgs/featured-course-card-3.svg",
+      img: "./assets/imgs/featured-course-card-3.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -591,7 +593,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-5.svg",
+      img: "./assets/imgs/featured-course-card-5.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -607,7 +609,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-6.svg",
+      img: "./assets/imgs/featured-course-card-6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -623,7 +625,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/card-img6.svg",
+      img: "./assets/imgs/card-img6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -639,7 +641,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-5.svg",
+      img: "./assets/imgs/featured-course-card-5.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "2Weeks",
@@ -655,7 +657,7 @@ const courses = {
       dataLangViewMore: "view_more",
     },
     {
-      img: "/assets/imgs/featured-course-card-6.svg",
+      img: "./assets/imgs/featured-course-card-6.svg",
       title: "Create an LMS Website with LearnPress",
       createdBy: "Determined-Poitras",
       time: "5Weeks",
@@ -721,7 +723,6 @@ if (coursesContainer || articlesContainer) {
         const filteredCards = cardsList.filter((card) =>
           card.date.toLowerCase().includes(searchValue)
         );
-
         const cardsHtml = filteredCards
           .map((card) => {
             return `
