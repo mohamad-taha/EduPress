@@ -33,20 +33,76 @@ modeSwitch.addEventListener("click", () => {
 sideBarContainer.classList.add("side-bar");
 sideBar.appendChild(sideBarContainer);
 sideBarContainer.innerHTML = `
-        <a href="./login.html">Login / Register</a>
-        <button class="search-btn">
-            <img src="./assets/imgs/search.svg" alt="search" />
-        </button>
+        <div class='side-bar-header'>
+        <img src='./assets/imgs/logo.svg' alt='logo'/>
+        </div>
+        <div class='side-bar-body'>
         <a href="index.html" >Home</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./blog.html">Blog</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
         <button class=nav-drop-down-btn>
         <div>
         Page
-        <img src="./assets/imgs/arrow-down.svg" alt="arrow-down" />
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_76_21)">
+            <path d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_76_21">
+              <rect width="16" height="16" fill="white" transform="translate(0.650391)"/>
+            </clipPath>
+          </defs>
+        </svg>
         </div>
         </button>
-        <a href="">Premium Theme</a>`;
+        <a href="#">Premium Theme</a>
+        </div>
+        <div class='side-bar-footer'>
+        <div>
+            <label for="search-input-course"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.16667 3.33341C5.94501 3.33341 3.33334 5.94509 3.33334 9.16675C3.33334 12.3884 5.94501 15.0001 9.16667 15.0001C12.3883 15.0001 15 12.3884 15 9.16675C15 5.94509 12.3883 3.33341 9.16667 3.33341ZM1.66667 9.16675C1.66667 5.02461 5.02454 1.66675 9.16667 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 13.3089 13.3088 16.6667 9.16667 16.6667C5.02454 16.6667 1.66667 13.3089 1.66667 9.16675Z"
+                  fill="black"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.2858 13.2858C13.6112 12.9604 14.1388 12.9604 14.4643 13.2858L18.0893 16.9108C18.4147 17.2363 18.4147 17.7639 18.0893 18.0893C17.7638 18.4148 17.2362 18.4148 16.9108 18.0893L13.2858 14.4643C12.9603 14.1389 12.9603 13.6113 13.2858 13.2858Z"
+                  fill="black"
+                /></svg
+            ></label>
+            <input
+              class="search-input"
+              autocomplete="off"
+              placeholder="Search"
+              type="text"
+              name="courseName"
+              id="search-input-course"
+            />
+          </div>
+        <a class='primary-btn' href="./login.html">Login</a>
+        
+        </div>
+        `;
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const sideBarLinks = document.querySelectorAll("nav a");
+sideBarLinks.forEach((btn) => {
+  const link = btn.getAttribute("href");
+  if (link === currentPage) {
+    btn.classList.add("active");
+  }
+});
 
 const navDropDown = document.querySelectorAll(".nav-drop-down-btn");
 
