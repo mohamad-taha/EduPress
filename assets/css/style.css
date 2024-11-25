@@ -317,7 +317,7 @@ nav .side-bar a {
   nav {
     padding: 0 20px;
   }
-  nav ul {
+  nav > ul {
     display: none;
   }
   nav .nav-actions .search-btn,

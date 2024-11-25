@@ -37,27 +37,27 @@ sideBarContainer.innerHTML = `
         <img src='./assets/imgs/logo.svg' alt='logo'/>
         </div>
         <div class='side-bar-body'>
-        <a data-lang='home' href="index.html" >Home</a>
-        <a data-lang='courses' href="courses.html">Courses</a>
-        <a data-lang='blog' href="blog.html">Blog</a>
-        <button class=nav-drop-down-btn>
-        <div>
-        <span data-lang='page'>
-        Page
-        </span>
-        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_76_21)">
-            <path d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z" fill="black"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_76_21">
-              <rect width="16" height="16" fill="white" transform="translate(0.650391)"/>
-            </clipPath>
-          </defs>
-        </svg>
-        </div>
-        </button>
-        <a href="#" data-lang='premium_theme'>Premium Theme</a>
+          <a class="nav-links" data-lang='home' href="index.html" >Home</a>
+          <a class="nav-links" data-lang='courses' href="courses.html">Courses</a>
+          <a class="nav-links" data-lang='blog' href="blog.html">Blog</a>
+          <button class=nav-drop-down-btn>
+            <div>
+              <span data-lang='page'>
+              Page
+              </span>
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_76_21)">
+                  <path d="M11.7104 5.72656L8.65039 8.7799L5.59039 5.72656L4.65039 6.66656L8.65039 10.6666L12.6504 6.66656L11.7104 5.72656Z" fill="black"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_76_21">
+                    <rect width="16" height="16" fill="white" transform="translate(0.650391)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </button>
+          <a class="nav-links" href="#" data-lang='premium_theme'>Premium Theme</a>
         </div>
         <div class='side-bar-footer'>
         <div>
@@ -98,7 +98,7 @@ sideBarContainer.innerHTML = `
 
 const currentPage = window.location.pathname.split("/").pop();
 
-const sideBarLinks = document.querySelectorAll("nav a");
+const sideBarLinks = document.querySelectorAll(".nav-links");
 sideBarLinks.forEach((btn) => {
   const link = btn.getAttribute("href");
   if (link === currentPage) {
