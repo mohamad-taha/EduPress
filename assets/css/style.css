@@ -23,6 +23,13 @@
   --text-color: black;
   --active-color: rgb(205, 205, 205);
 }
+[data-theme="light"] {
+  --bg-color: whitesmoke;
+  --text-color: black;
+  --active-color: rgb(205, 205, 205);
+  --grey-color: #281a1a;
+  --dark-gray: #555555;
+}
 [data-theme="dark"] {
   --bg-color: #333333;
   --text-color: white;
@@ -294,10 +301,10 @@ nav .side-bar a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  justify-content: center;
   box-shadow: 0px 0px 2px 1px black;
-  width: max-content;
   height: 35px;
+  width: 35px;
   border-radius: 25px;
   background-color: transparent;
   border: none;

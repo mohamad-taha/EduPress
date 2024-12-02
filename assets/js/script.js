@@ -17,17 +17,34 @@ const body = document.querySelector("body");
 const modeSwitch = document.querySelector(".mode-switch");
 const modeSwitchIcon = document.querySelector(".mode-icon");
 
-let darkMode = false;
+modeSwitchIcon.style.transition = "300ms";
+
+body.setAttribute("data-theme", localStorage.getItem("mode"));
+
+if (localStorage.getItem("mode") == "dark") {
+  modeSwitchIcon.className = "fa-solid fa-sun mode-icon";
+} else {
+  modeSwitchIcon.className = "fa-solid fa-moon mode-icon";
+}
 
 modeSwitch.addEventListener("click", () => {
-  darkMode = !darkMode;
-  modeSwitchIcon.className = darkMode
-    ? "fa-solid fa-sun mode-icon"
-    : "fa-solid fa-moon mode-icon";
-  modeSwitchIcon.style.transform = darkMode ? "rotate(180deg)" : "";
   const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "" : "dark";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
   body.setAttribute("data-theme", newTheme);
+
+  localStorage.setItem("mode", newTheme);
+
+  modeSwitchIcon.className =
+    localStorage.getItem("mode") == "dark"
+      ? "fa-solid fa-sun mode-icon"
+      : "fa-solid fa-moon mode-icon";
+
+  modeSwitchIcon.style.opacity = "0.8";
+
+  setTimeout(() => {
+    modeSwitchIcon.style.opacity = "1";
+  }, 300);
 });
 
 sideBarContainer.classList.add("side-bar");
@@ -917,6 +934,7 @@ const toggleStyleView = (isGrid) => {
   }
 };
 if (gridBtnStyle) {
+  gridBtnStyleIcn.style.fill = "var(--primary-color)";
   gridBtnStyle.addEventListener("click", () => {
     toggleStyleView(true);
     isGridView = true;

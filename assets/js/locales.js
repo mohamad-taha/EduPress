@@ -5,7 +5,7 @@ const translation = {
     blog: "Blog",
     page: "Page",
     premium_theme: "Premuim Theme",
-    login: "Login",
+    login: "Login / Register",
     register: "Register",
     contact: "Contact",
     faq: "Faq",
@@ -158,120 +158,145 @@ const translation = {
       "ابحث عن قالب رائع لتعلم WordPress",
   },
 };
+
 const langChange = document.querySelectorAll("[name=Languages]");
 const paginationRight = document.querySelector(".pagination-btn-right");
 const paginationleft = document.querySelector(".pagination-btn-left");
+const nodes = document.querySelectorAll("[data-lang]");
 
-langChange.forEach((select) => {
-  select.addEventListener("change", () => {
-    const language = select.options[select.selectedIndex].value;
+nodes.forEach((node) => {
+  const key = node.getAttribute("data-lang");
+  node.innerText = translation[localStorage.getItem("language")][key];
+});
 
-    const nodes = document.querySelectorAll("[data-lang]");
-    nodes.forEach((node) => {
-      const key = node.getAttribute("data-lang");
-      node.innerText = translation[language][key];
+const inputsLanguage = (lang) => {
+  if (lang == "ar") {
+    if (paginationleft || paginationRight) {
+      paginationleft.innerHTML = ` <img src="./assets/imgs/arrowRight.svg" alt="arrow" />`;
+      paginationRight.innerHTML = ` <img src="./assets/imgs/arrow-left.svg" alt="arrow" />`;
+    }
+
+    document.querySelectorAll(".search-input").forEach((input) => {
+      input.placeholder = "ابحث";
     });
 
-    if (language === "ar") {
-      body.dir = "rtl";
-      document.documentElement.lang = "ar";
+    const contactInputs = document.querySelectorAll(".contact-input");
+    if (contactInputs[0] || contactInputs[1] || contactInputs[2]) {
+      contactInputs[0].placeholder = "الاسم*";
+      contactInputs[1].placeholder = "البريد الالكتروني*";
+      contactInputs[2].placeholder = "تعليق*";
+    }
+    const signInputs = document.querySelectorAll(".sign-input");
+    if (signInputs[0]) {
+      signInputs[0].placeholder = "البريد الالكتروني أو الاسم*";
+      signInputs[1].placeholder = "كلمة المرور*";
+      signInputs[2].placeholder = "البريد الالكتروني*";
+      signInputs[3].placeholder = "الاسم*";
+      signInputs[4].placeholder = "كلمة المرور*";
+      signInputs[5].placeholder = "تأكيد كلمة المرور*";
 
-      if (paginationleft || paginationRight) {
-        paginationleft.innerHTML = ` <img src="./assets/imgs/arrowRight.svg" alt="arrow" />`;
-        paginationRight.innerHTML = ` <img src="./assets/imgs/arrow-left.svg" alt="arrow" />`;
-      }
+      document
+        .querySelectorAll(".sign-in-up .password-container button")
+        .forEach((eye) => {
+          eye.style = "right:93%";
+        });
+    }
 
-      document.querySelectorAll(".search-input").forEach((input) => {
-        input.placeholder = "ابحث";
-      });
+    const blogInputIcn = document.querySelector('[for="search-input-blog"]');
+    if (blogInputIcn) {
+      blogInputIcn.style = "right:90%";
+    }
+    const courseInputIcn = document.querySelector(
+      '[for="search-input-course"]'
+    );
+    if (courseInputIcn) {
+      courseInputIcn.style = "right:90%";
+    }
 
-      const contactInputs = document.querySelectorAll(".contact-input");
-      if (contactInputs[0] || contactInputs[1] || contactInputs[2]) {
-        contactInputs[0].placeholder = "الاسم*";
-        contactInputs[1].placeholder = "البريد الالكتروني*";
-        contactInputs[2].placeholder = "تعليق*";
-      }
-      const signInputs = document.querySelectorAll(".sign-input");
-      if (signInputs[0]) {
-        signInputs[0].placeholder = "البريد الالكتروني أو الاسم*";
-        signInputs[1].placeholder = "كلمة المرور*";
-        signInputs[2].placeholder = "البريد الالكتروني*";
-        signInputs[3].placeholder = "الاسم*";
-        signInputs[4].placeholder = "كلمة المرور*";
-        signInputs[5].placeholder = "تأكيد كلمة المرور*";
-
-        document
-          .querySelectorAll(".sign-in-up .password-container button")
-          .forEach((eye) => {
-            eye.style = "right:93%";
-          });
-      }
-
-      const blogInputIcn = document.querySelector('[for="search-input-blog"]');
-      if (blogInputIcn) {
-        blogInputIcn.style = "right:90%";
-      }
-      const courseInputIcn = document.querySelector(
-        '[for="search-input-course"]'
-      );
-      if (courseInputIcn) {
-        courseInputIcn.style = "right:90%";
-      }
-
-      const sideBarInput = document.querySelector(".side-bar input");
+    const sideBarInput = document.querySelector(".side-bar input");
+    const sideBarInputIcn = document.querySelector("[for='search']");
+    if (sideBarInput) {
       sideBarInput.placeholder = "البحث";
-
-      const sideBarInputIcn = document.querySelector("[for='search']");
       sideBarInputIcn.style = "right:85%";
-    } else if (language === "en") {
-      body.dir = "ltr";
-      document.documentElement.lang = "en";
+    }
+  } else if (lang == "en") {
+    if (paginationleft || paginationRight) {
+      paginationleft.innerHTML = ` <img src="./assets/imgs/arrow-left.svg" alt="arrow" />`;
+      paginationRight.innerHTML = ` <img src="./assets/imgs/arrowRight.svg" alt="arrow" />`;
+    }
 
-      if (paginationleft || paginationRight) {
-        paginationleft.innerHTML = ` <img src="./assets/imgs/arrow-left.svg" alt="arrow" />`;
-        paginationRight.innerHTML = ` <img src="./assets/imgs/arrowRight.svg" alt="arrow" />`;
-      }
+    document.querySelectorAll(".search-input").forEach((input) => {
+      input.placeholder = "Search";
+    });
 
-      document.querySelectorAll(".search-input").forEach((input) => {
-        input.placeholder = "Search";
-      });
+    const contactInputs = document.querySelectorAll(".contact-input");
+    if (contactInputs[0] || contactInputs[1] || contactInputs[2]) {
+      contactInputs[0].placeholder = "Name*";
+      contactInputs[1].placeholder = "Email*";
+      contactInputs[2].placeholder = "Comment*";
+    }
 
-      const contactInputs = document.querySelectorAll(".contact-input");
-      if (contactInputs[0] || contactInputs[1] || contactInputs[2]) {
-        contactInputs[0].placeholder = "Name*";
-        contactInputs[1].placeholder = "Email*";
-        contactInputs[2].placeholder = "Comment*";
-      }
+    const signInputs = document.querySelectorAll(".sign-input");
+    if (signInputs[0]) {
+      signInputs[0].placeholder = "Email or Username*";
+      signInputs[1].placeholder = "Password*";
+      signInputs[2].placeholder = "Email*";
+      signInputs[3].placeholder = "Username*";
+      signInputs[4].placeholder = "Password*";
+      signInputs[5].placeholder = "Confirm Password*";
 
-      const signInputs = document.querySelectorAll(".sign-input");
-      if (signInputs[0]) {
-        signInputs[0].placeholder = "Email or Username*";
-        signInputs[1].placeholder = "Password*";
-        signInputs[2].placeholder = "Email*";
-        signInputs[3].placeholder = "Username*";
-        signInputs[4].placeholder = "Password*";
-        signInputs[5].placeholder = "Confirm Password*";
-
-        document
-          .querySelectorAll(".sign-in-up .password-container button")
-          .forEach((eye) => {
-            eye.style = "left:93%";
-          });
-      }
-      const blogInputIcn = document.querySelector('[for="search-input-blog"]');
-      if (blogInputIcn) {
-        blogInputIcn.style = "left:90%";
-      }
-      const courseInputIcn = document.querySelector(
-        '[for="search-input-course"]'
-      );
-      if (courseInputIcn) {
-        courseInputIcn.style = "left:90%";
-      }
-      const sideBarInput = document.querySelector(".side-bar input");
+      document
+        .querySelectorAll(".sign-in-up .password-container button")
+        .forEach((eye) => {
+          eye.style = "left:93%";
+        });
+    }
+    const blogInputIcn = document.querySelector('[for="search-input-blog"]');
+    if (blogInputIcn) {
+      blogInputIcn.style = "left:90%";
+    }
+    const courseInputIcn = document.querySelector(
+      '[for="search-input-course"]'
+    );
+    if (courseInputIcn) {
+      courseInputIcn.style = "left:90%";
+    }
+    const sideBarInput = document.querySelector(".side-bar input");
+    const sideBarInputIcn = document.querySelector("[for='search']");
+    if (sideBarInput) {
       sideBarInput.placeholder = "Search";
-      const sideBarInputIcn = document.querySelector("[for='search']");
       sideBarInputIcn.style = "left:'85%'";
+    }
+  }
+};
+
+inputsLanguage(localStorage.getItem("language"));
+
+document.querySelector("body").dir = localStorage.getItem("dir");
+document.documentElement.lang = localStorage.getItem("language");
+
+langChange.forEach((select) => {
+  select.value = localStorage.getItem("language");
+  select.addEventListener("change", () => {
+    let language = select.options[select.selectedIndex].value;
+    localStorage.setItem("language", language);
+    nodes.forEach((node) => {
+      const key = node.getAttribute("data-lang");
+      node.innerText = translation[localStorage.getItem("language")][key];
+    });
+
+    if (localStorage.getItem("language") == "ar") {
+      localStorage.setItem("language", "ar");
+      localStorage.setItem("dir", "rtl");
+      body.dir = localStorage.getItem("dir");
+      document.documentElement.lang = localStorage.getItem("language");
+      inputsLanguage("ar");
+    } else {
+      localStorage.setItem("language", "en");
+      localStorage.setItem("dir", "ltr");
+      body.dir = localStorage.getItem("dir");
+      document.documentElement.lang = localStorage.getItem("language");
+      inputsLanguage("en");
     }
   });
 });
