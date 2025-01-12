@@ -166,7 +166,7 @@ const nodes = document.querySelectorAll("[data-lang]");
 
 nodes.forEach((node) => {
   const key = node.getAttribute("data-lang");
-  node.innerText = translation[localStorage.getItem("language")][key];
+  node.innerText = translation[localStorage.getItem("language") ?? "en"][key];
 });
 
 const inputsLanguage = (lang) => {
@@ -276,7 +276,7 @@ document.querySelector("body").dir = localStorage.getItem("dir");
 document.documentElement.lang = localStorage.getItem("language");
 
 langChange.forEach((select) => {
-  select.value = localStorage.getItem("language");
+  select.value = localStorage.getItem("language") ?? "";
   select.addEventListener("change", () => {
     let language = select.options[select.selectedIndex].value;
     localStorage.setItem("language", language);

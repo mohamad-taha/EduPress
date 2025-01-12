@@ -19,7 +19,7 @@ const modeSwitchIcon = document.querySelector(".mode-icon");
 
 modeSwitchIcon.style.transition = "300ms";
 
-body.setAttribute("data-theme", localStorage.getItem("mode"));
+body.setAttribute("data-theme", localStorage.getItem("mode") ?? "light");
 
 if (localStorage.getItem("mode") == "dark") {
   modeSwitchIcon.className = "fa-solid fa-sun mode-icon";
@@ -163,10 +163,11 @@ listBtn.addEventListener("click", (e) => {
   toggleSidebar(true);
 });
 body.addEventListener("click", handleBodyClick);
+
 body.addEventListener("click", () => {
   navDropDown.forEach((btn) => {
     const dropDownContainer = btn.querySelector(".drop-down");
-    toggleDropDown(dropDownContainer, false); // Close all dropdowns
+    toggleDropDown(dropDownContainer, false);
   });
 });
 window.onresize = () => {
